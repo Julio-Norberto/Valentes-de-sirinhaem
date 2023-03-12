@@ -1,0 +1,22 @@
+.menu-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ul-list {
+  display: flex;
+}
+
+.ul-list li {
+  margin-left: 35px;
+  list-style: none;
+}
+
+.ul-list li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}

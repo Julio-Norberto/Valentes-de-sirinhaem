@@ -1,9 +1,12 @@
 import './home.css'
 
+import { Menu } from '../../components/Menu'
+
 export const Home: React.FunctionComponent = () => {
     return (
-        <div>
-            <h1>Página Home</h1>
+        <div className='home-content'>
+          <Menu />
+
         </div>
     )
 }
