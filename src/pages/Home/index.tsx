@@ -4,7 +4,7 @@ import { Menu } from '../../components/Menu'
 
 export const Home: React.FunctionComponent = () => {
     return (
-        <div className='home-content'>
+        <div className='home-container'>
           <Menu />
 
         </div>
