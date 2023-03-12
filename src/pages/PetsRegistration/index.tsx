@@ -1,3 +1,5 @@
+import './petsRegistration.css'
+
 export const PetsRegistration: React.FunctionComponent = () => {
     return (
         <div>

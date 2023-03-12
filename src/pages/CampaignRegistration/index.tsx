@@ -1,3 +1,5 @@
+import './campaignRegistration.css'
+
 export const CampaignRegistration: React.FunctionComponent = () => {
     return (
         <div>

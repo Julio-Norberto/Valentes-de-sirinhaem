@@ -1,3 +1,5 @@
+import './donations.css'
+
 export const Donations: React.FunctionComponent = () => {
     return (
         <div>

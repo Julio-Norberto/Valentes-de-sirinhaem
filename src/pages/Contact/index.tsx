@@ -1,3 +1,5 @@
+import './contact.css'
+
 export const Contact: React.FunctionComponent = () => {
     return (
         <div>

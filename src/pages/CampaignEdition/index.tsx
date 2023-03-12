@@ -1,3 +1,5 @@
+import './campaignEdition.css'
+
 export const CampaignEdition: React.FunctionComponent = () => {
     return (
         <div>

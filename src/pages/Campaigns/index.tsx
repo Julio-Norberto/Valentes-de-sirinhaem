@@ -1,3 +1,5 @@
+import './campaigns.css'
+
 export const Campaign: React.FunctionComponent = () => {
     return (
         <div>

@@ -1,3 +1,5 @@
+import './adoption.css'
+
 export const Adoption: React.FunctionComponent = () => {
     return (
         <div>

@@ -1,3 +1,5 @@
+import './home.css'
+
 export const Home: React.FunctionComponent = () => {
     return (
         <div>

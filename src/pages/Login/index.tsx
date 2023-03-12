@@ -1,3 +1,5 @@
+import './login.css'
+
 export const Login: React.FunctionComponent = () => {
     return (
         <div>

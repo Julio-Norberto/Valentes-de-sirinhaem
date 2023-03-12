@@ -1,3 +1,5 @@
+import './panel.css'
+
 export const Panel: React.FunctionComponent = () => {
     return (
         <div>
