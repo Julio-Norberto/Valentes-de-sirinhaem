@@ -78,7 +78,6 @@
   }
 
   .home-content {
-    border: 1px solid red;
     height: 600px;
   }
 
@@ -96,5 +95,42 @@
     background-color: #EF7C12;
     color: #fff;
     font-weight: bold;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .home-container {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .home-content {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .home-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    color: #000;
+    margin-bottom: 28px;
+  }
+
+  .home-text p {
+    width: 100%;
+    margin-bottom: 44px;
+  }
+
+  .home-img {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .home-img img {
+    width: 300px;
   }
 }
