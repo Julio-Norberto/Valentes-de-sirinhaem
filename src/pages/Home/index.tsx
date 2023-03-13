@@ -2,6 +2,7 @@ import './home.css'
 
 import { Menu } from '../../components/Menu'
 import { Link } from 'react-router-dom'
+import { Bar } from '../../components/Bar'
 
 import dogs from '../../assets/dogsHome.svg'
 
@@ -28,6 +29,7 @@ export const Home: React.FunctionComponent = () => {
             </div>
 
           </div>
+          <Bar title='Você pode fazer a diferença nessa luta' />
 
         </div>
     )
