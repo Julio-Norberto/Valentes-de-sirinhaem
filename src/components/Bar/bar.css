@@ -8,3 +8,9 @@
   color: #fff;
   margin-top: 200px;
 }
+
+@media (min-width: 300px) and (max-width: 750px) {
+  .bar-container h1 {
+    font-size: 1.2em;
+  }
+}
