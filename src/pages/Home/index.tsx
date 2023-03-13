@@ -1,10 +1,14 @@
 import './home.css'
 
 import { Menu } from '../../components/Menu'
-import { Link } from 'react-router-dom'
 import { Bar } from '../../components/Bar'
+import { SectionHomeCard } from '../../components/SectionHomeCard'
+import { Button } from '../../components/Button'
 
 import dogs from '../../assets/dogsHome.svg'
+import adoptionImage from '../../assets/adoptionHome.png'
+import dogPaw from '../../assets/Dogpaw-cuate.svg'
+import adoptionImage2 from '../../assets/adoption.svg'
 
 export const Home: React.FunctionComponent = () => {
     return (
@@ -21,7 +25,7 @@ export const Home: React.FunctionComponent = () => {
                 </p>
               </div>
 
-              <Link className='home-button' to='adoption' >Disponíveis para adoção</Link>
+              <Button title='Disponíveis para adoção' destination='/adoption' />
             </div>
 
             <div className='home-img'>
@@ -30,6 +34,37 @@ export const Home: React.FunctionComponent = () => {
 
           </div>
           <Bar title='Você pode fazer a diferença nessa luta' />
+
+          <SectionHomeCard
+            image={adoptionImage}
+            title='Adote um Pet!'
+            description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Disponíveis para adoção'
+            direction='row-reverse'
+            width='200px'
+            display='flex'
+            align='center'
+            titleAlign='left'
+            destiny='/adoption'
+          />
+
+          <SectionHomeCard
+            image={dogPaw}
+            title='Veja nossas campanhas!'
+            description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Ver campanhas'
+            destiny='/campaign'
+          />
+
+          <SectionHomeCard
+            image={adoptionImage2}
+            title='Faça uma doação!'
+            description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Fazer doação'
+            direction='row-reverse'
+            width='200px'
+            display='flex'
+            align='center'
+            titleAlign='left'
+            destiny='/donations'
+          />
 
         </div>
     )

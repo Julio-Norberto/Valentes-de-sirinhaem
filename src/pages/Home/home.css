@@ -40,20 +40,6 @@
   width: 530px;
 }
 
-.home-button {
-  padding: 18px;
-  background-color: #02CBBF;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.home-button:hover {
-  background-color: #00a59a;
-}
-
 @media (min-width: 1400px) {
   .home-content {
     height: 800px;
@@ -88,13 +74,6 @@
 
   .home-img img {
     width: 400px;
-  }
-
-  .home-button {
-    /*background-color: rgb(30, 255, 236);*/
-    background-color: #EF7C12;
-    color: #fff;
-    font-weight: bold;
   }
 }
 

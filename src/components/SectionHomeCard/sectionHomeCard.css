@@ -1,0 +1,75 @@
+.cardSection-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.cardSection-text {
+  width: 40%;
+  text-align: center;
+}
+
+.cardSection-text div h2 {
+  font-size: 2.4em;
+  margin-bottom: 35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cardSection-text div p {
+  font-size: 1.1em;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 1400px) {
+  .cardSection-image img {
+    width: 500px;
+  }
+
+  .cardSection-text h2 {
+    font-size: 28px;
+  }
+
+  .cardSection-text p {
+    font-size: 18px;
+  }
+
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .cardSection-container {
+    flex-direction: column !important;
+  }
+
+  .cardSection-text {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .cardSection-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-image {
+    height: 350px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1150px) {
+  .cardSection-image img {
+    width: 350px;
+    margin-right: -20px;
+  }
+
+  .cardSection-text h2 {
+    font-size: 24px;
+  }
+}
