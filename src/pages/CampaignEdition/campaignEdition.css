@@ -1,0 +1,42 @@
+.container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container > header {
+	background-color: #1CB4A8;
+}
+
+.content {
+	width: 80%;
+	margin: 10px auto;
+	flex: 1 0 auto;
+}
+
+.content > h1 {
+	font-size: 32px;
+	line-height: 38.73px;
+	font-weight: 700;
+	text-align: center;
+
+	padding: 74px 0 72px 0;
+}
+
+.pets-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14.125rem, auto));
+	justify-content: space-between;
+	justify-items: center;
+
+	column-gap: 52px;
+	row-gap: 40px;
+}
+
+.pets {
+	height: 394px;
+	min-width: 100%;
+	margin: 0;
+	background-color: black;
+}
