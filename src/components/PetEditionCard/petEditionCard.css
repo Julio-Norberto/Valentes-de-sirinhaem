@@ -4,3 +4,39 @@
 	margin: 0;
 	background-color: black;
 }
+
+.container > image {
+  min-width: 226px;
+  width: 226px;
+  height: 229px;
+}
+
+.container > h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+  margin: 19px
+}
+
+.btn-container {
+  display: flex;
+  flex: 1;
+  gap: 19px;
+}
+
+.btn-container > button {
+  padding: 13px 35px 12px;
+  
+  color:#FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.94px;
+}
+
+.btn-edit {
+  background: #03FEEF;
+}
+
+.btn-edit {
+  background: #FE0303;
+}
