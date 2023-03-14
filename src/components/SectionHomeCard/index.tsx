@@ -2,16 +2,18 @@ import { Button } from '../Button'
 import './sectionHomeCard.css'
 
 interface ISectionHomeCard {
-    image: any
-    title: string
-    description: string
-    buttonTitle: string
-    direction?: string
-    width?: string
-    display?: string
-    align?: string
-    titleAlign?: 'center' | 'left'
-    destiny: string
+  image: any
+  title: string
+  description: string
+  buttonTitle: string
+  direction?: string
+  width?: string
+  display?: string
+  align?: string
+  titleAlign?: 'center' | 'left'
+  destiny: string
+  left?: string
+  right?: string
 }
 
 export const SectionHomeCard:React.FunctionComponent<ISectionHomeCard> = (props: ISectionHomeCard) => {
@@ -36,7 +38,7 @@ export const SectionHomeCard:React.FunctionComponent<ISectionHomeCard> = (props:
             <p> {props.description} </p>
           </div>
 
-          <Button destination={props.destiny} title={props.buttonTitle} display={props.display} width={props.width} align={props.align} />
+          <Button paddingLeft={props.left} paddingRight={props.right} destination={props.destiny} title={props.buttonTitle} display={props.display} width={props.width} align={props.align} />
         </div>
       </div>
     )
