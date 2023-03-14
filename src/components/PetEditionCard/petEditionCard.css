@@ -34,18 +34,29 @@
   box-sizing: border-box;
   
   color:#FFFFFF;
-  font-weight: 700;
-  font-size: 14px;
   line-height: 16.94px;
   text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+
+  cursor: pointer;
 }
+
 
 .btn-edit {
   all: unset;
   background: #03FEEF;
 }
 
+.btn-edit:hover {
+  background-color: #02CBBF;
+}
+
 .btn-remove {
   all: unset;
   background: #FE0303;
+}
+
+.btn-remove:hover {
+  background: #a30101;
 }
