@@ -1,0 +1,17 @@
+.container > header {
+	background-color: #1CB4A8;
+}
+
+.container {
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.content {
+	width: 80%;
+	margin: 44px auto;
+}
