@@ -10,6 +10,7 @@ import adoptionImage from '../../assets/adoptionHome.png'
 import dogPaw from '../../assets/Dogpaw-cuate.svg'
 import adoptionImage2 from '../../assets/adoption.svg'
 import dogracao from '../../assets/Dogracao.svg'
+import { Footer } from '../../components/Footer'
 
 export const Home: React.FunctionComponent = () => {
     return (
@@ -79,6 +80,8 @@ export const Home: React.FunctionComponent = () => {
             left='80px'
             right='80px'
           />
+
+          <Footer />
 
         </div>
     )
