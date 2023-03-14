@@ -11,6 +11,12 @@ export const PetsEdition: React.FunctionComponent = () => {
 
       <section className='content'>
         <h1>Todos os pets</h1>
+
+        <div className='pets-content'>
+          <div className='pets'></div>
+          <div className='pets'></div>
+          <div className='pets'></div>
+        </div>
       </section>
       <Footer />
     </div>
