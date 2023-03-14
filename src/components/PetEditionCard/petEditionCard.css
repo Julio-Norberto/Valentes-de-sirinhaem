@@ -1,42 +1,51 @@
-.container {
-  height: 394px;
-	min-width: 100%;
+.card-container {
+  max-height: 394px;
 	margin: 0;
-	background-color: black;
+  text-align: center;
 }
 
-.container > image {
-  min-width: 226px;
+.card-container > img {
+  max-width: 100%;
   width: 226px;
   height: 229px;
+  border-radius: 8px;
+
+  object-fit: cover;
 }
 
-.container > h2 {
+.card-container > h2 {
   font-weight: 700;
   font-size: 20px;
   line-height: 24.2px;
-  margin: 19px
+  margin: 19px;
 }
 
 .btn-container {
   display: flex;
-  flex: 1;
+  align-items: center;
+  flex-direction: column;
   gap: 19px;
 }
 
 .btn-container > button {
   padding: 13px 35px 12px;
+  border-radius: 16px;
+  width: 200px;
+  box-sizing: border-box;
   
   color:#FFFFFF;
   font-weight: 700;
   font-size: 14px;
   line-height: 16.94px;
+  text-align: center;
 }
 
 .btn-edit {
+  all: unset;
   background: #03FEEF;
 }
 
-.btn-edit {
+.btn-remove {
+  all: unset;
   background: #FE0303;
 }

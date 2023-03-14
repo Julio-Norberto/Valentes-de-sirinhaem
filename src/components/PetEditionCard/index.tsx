@@ -1,4 +1,4 @@
-import './petsEditionCard.css'
+import './petEditionCard.css'
 
 interface PetEditionCardProps {
   name: string
@@ -7,7 +7,7 @@ interface PetEditionCardProps {
 
 export const PetEditionCard: React.FunctionComponent<PetEditionCardProps> = (props) => {
   return (
-    <div className='container'>
+    <div className='card-container'>
       <img src={props.image} alt={props.name} />
       <h2>{props.name}</h2>
 
