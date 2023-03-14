@@ -21,3 +21,11 @@
   text-decoration: none;
   color: #fff;
 }
+
+@media (min-width: 300px) and (max-width: 750px) {
+  .footer-container {
+    text-align: center;
+    font-size: 0.8em;
+    height: 120px;
+  }
+}

@@ -6,7 +6,7 @@ import { SectionHomeCard } from '../../components/SectionHomeCard'
 import { Button } from '../../components/Button'
 
 import dogs from '../../assets/dogsHome.svg'
-import adoptionImage from '../../assets/adoptionHome.png'
+import adoptionImage from '../../assets/adopt.svg'
 import dogPaw from '../../assets/Dogpaw-cuate.svg'
 import adoptionImage2 from '../../assets/adoption.svg'
 import dogracao from '../../assets/Dogracao.svg'
@@ -70,16 +70,18 @@ export const Home: React.FunctionComponent = () => {
             destiny='/donations'
           />
 
-          <Bar title='Ajuda a gente com um pouco de ração?' />
+          <div style={{ marginTop: '44px' }}>
+            <Bar title='Ajuda a gente com um pouco de ração?' />
 
-          <SectionHomeCard
-            image={dogracao}
-            title='Doe um pouco de ração'
-            description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Contato'
-            destiny='/contact'
-            left='80px'
-            right='80px'
-          />
+            <SectionHomeCard
+              image={dogracao}
+              title='Doe um pouco de ração'
+              description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Contato'
+              destiny='/contact'
+              left='80px'
+              right='80px'
+            />
+          </div>
 
           <Footer />
 
