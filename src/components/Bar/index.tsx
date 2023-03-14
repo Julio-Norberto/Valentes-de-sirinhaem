@@ -1,13 +1,15 @@
 import './bar.css'
+import { Menu } from '../Menu'
 
 type BarProps = {
-  title: string
+  title?: string
+  withMenu?: boolean
 }
 
-export const Bar: React.FunctionComponent<BarProps> = ({title}: BarProps) => {
+export const Bar: React.FunctionComponent<BarProps> = ({title, withMenu}: BarProps) => {
   return (
     <div className='bar-container'>
-      <h1> {title} </h1>
+      { withMenu ? <Menu /> : <h1> {title} </h1> }
     </div>
   )
 }
