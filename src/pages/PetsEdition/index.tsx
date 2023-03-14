@@ -10,7 +10,7 @@ export const PetsEdition: React.FunctionComponent = () => {
       </header>
 
       <section className='content'>
-        <h1>Página PetsEdition</h1>
+        <h1>Todos os pets</h1>
       </section>
       <Footer />
     </div>

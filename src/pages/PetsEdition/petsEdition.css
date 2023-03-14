@@ -1,17 +1,28 @@
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
 .container > header {
 	background-color: #1CB4A8;
 }
 
-.container {
-	height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-
 .content {
 	width: 80%;
-	margin: 44px auto;
+	margin: 10px auto;
+}
+
+.content > h1 {
+	font-size: 32px;
+	line-height: 38.73px;
+	font-weight: 700;
+	text-align: center;
+
+	padding: 74px 0 72px 0;
+}
+
+.container footer-container {
+	position: fixed;
+  bottom: 0;
 }
