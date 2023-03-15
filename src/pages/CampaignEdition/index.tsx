@@ -1,8 +1,8 @@
 import { CampaignEditionCard } from '../../components/CampaignEditionCard'
 import { Footer } from '../../components/Footer'
-import { Menu } from '../../components/Menu'
 import dogExemple from '../../assets/dog-example2.jpg'
 import './campaignEdition.css'
+import { Bar } from '../../components/Bar'
 
 export const CampaignEdition: React.FunctionComponent = () => {
     const mockPets = [
@@ -13,10 +13,8 @@ export const CampaignEdition: React.FunctionComponent = () => {
 
     return (
         <div className='container'>
-          <header>
-            <Menu />
-          </header>
-    
+            <Bar withMenu={true} />
+
           <section className='content'>
             <h1>Todas as campanhas</h1>
     

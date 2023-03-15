@@ -1,8 +1,8 @@
 import { Footer } from '../../components/Footer'
-import { Menu } from '../../components/Menu'
 import './petsEdition.css'
 import dogExemple from '../../assets/dog-example2.jpg'
 import { PetEditionCard } from '../../components/PetEditionCard'
+import { Bar } from '../../components/Bar'
 
 export const PetsEdition: React.FunctionComponent = () => {
   const mockPets = [
@@ -13,9 +13,7 @@ export const PetsEdition: React.FunctionComponent = () => {
 
   return (
     <div className='container'>
-      <header>
-        <Menu />
-      </header>
+      <Bar withMenu={true} />
 
       <section className='content'>
         <h1>Todos os pets</h1>
