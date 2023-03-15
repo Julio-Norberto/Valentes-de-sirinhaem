@@ -1,38 +1,24 @@
+import { Bar } from '../../components/Bar'
 import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
+import { Input } from '../../components/Input'
 import { Menu } from '../../components/Menu'
 import './petsRegistration.css'
 
 export const PetsRegistration: React.FunctionComponent = () => {
     return (
         <div>
-            <div className='menu-pets-register-container'>
-                <Menu />
-            </div>
+            <Bar withMenu={true} />
+            
             <form className='pets-register-form'>
                 <h1 className='pets-register-form-title'>
                     Cadastro de Pets
                 </h1>
-
-                <div className='pets-register-input-container'>
-                    <h5 className='pets-register-input-title'>Nome do pet:</h5>
-                    <input className='pets-register-input-box' type="text" />
-                </div>
-
-                <div className='pets-register-input-container'>
-                    <h5 className='pets-register-input-title'>Idade:</h5>
-                    <input className='pets-register-input-box' type="text" />
-                </div>
-
-                <div className='pets-register-input-container'>
-                    <h5 className='pets-register-input-title'>Raça:</h5>
-                    <input className='pets-register-input-box' type="text" />
-                </div>
-
-                <div className='pets-register-input-container'>
-                    <h5 className='pets-register-input-title'>Peso (kg):</h5>
-                    <input className='pets-register-input-box' type="text" />
-                </div>
+                
+                <Input title={'Nome do pet:'} withTitle={true} width={'100%'} />
+                <Input title={'Idade:'} withTitle={true} width={'100%'} />
+                <Input title={'Raça:'} withTitle={true} width={'100%'} />
+                <Input title={'Peso (kg):'} withTitle={true} width={'100%'} />
 
                 <div className='img-button-box'>  
                     <Button title={'Enviar Imagem'} destination={''} paddingLeft={'12px'} paddingRight={'12px'} />
