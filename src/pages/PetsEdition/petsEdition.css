@@ -1,17 +1,17 @@
-.container {
+.pets-container {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.content {
+.pets-main-content {
 	width: 80%;
 	margin: 10px auto;
 	flex: 1 0 auto;
 }
 
-.content > h1 {
+.pets-main-content > h1 {
 	font-size: 32px;
 	line-height: 38.73px;
 	font-weight: 700;

@@ -14,10 +14,10 @@ export const PetsEdition: React.FunctionComponent = () => {
   const isEmptyPets = mockPets.length < 1
 
   return (
-    <div className='container'>
+    <div className='pets-container'>
       <Bar withMenu={true} />
 
-      <section className='content'>
+      <section className='pets-main-content'>
         <h1>Todos os pets</h1>
 
         <div className={isEmptyPets ? 'pets-no-content' : 'pets-content'}>

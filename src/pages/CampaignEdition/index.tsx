@@ -14,10 +14,10 @@ export const CampaignEdition: React.FunctionComponent = () => {
     const isEmptyCampaign = mockCampaign.length < 1
 
     return (
-        <div className='container'>
+        <div className='campaign-container'>
           <Bar withMenu={true} />
 
-          <section className='content'>
+          <section className='campaign-main-content'>
             <h1>Todas as campanhas</h1>
     
             <div className={isEmptyCampaign ? 'campaign-no-content' : 'campaign-content'}>
