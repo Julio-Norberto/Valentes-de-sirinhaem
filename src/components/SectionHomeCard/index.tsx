@@ -35,7 +35,7 @@ export const SectionHomeCard:React.FunctionComponent<ISectionHomeCard> = (props:
 
           <div>
             <h2 style={h2Style}> {props.title} </h2>
-            <p> {props.description} </p>
+            <p style={h2Style}> {props.description} </p>
           </div>
 
           <Button paddingLeft={props.left} paddingRight={props.right} destination={props.destiny} title={props.buttonTitle} display={props.display} width={props.width} align={props.align} />

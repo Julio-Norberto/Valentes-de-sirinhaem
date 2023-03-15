@@ -56,6 +56,7 @@ export const Home: React.FunctionComponent = () => {
             destiny='/campaign'
             right='60px'
             left='60px'
+            titleAlign='center'
           />
 
           <SectionHomeCard
@@ -80,6 +81,7 @@ export const Home: React.FunctionComponent = () => {
               destiny='/contact'
               left='80px'
               right='80px'
+              titleAlign='center'
             />
           </div>
 
