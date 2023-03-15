@@ -28,3 +28,9 @@
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width: 500px) {
+    .pets-register-form {
+        width: 300px;
+    }
+}

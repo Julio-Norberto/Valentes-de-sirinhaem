@@ -25,7 +25,7 @@ export const PetsRegistration: React.FunctionComponent = () => {
                 </div>
 
                 <div className='register-button-box'>
-                    <Button title={'Cadastrar Pet'} destination={''} paddingLeft={'100px'} paddingRight={'100px'} />
+                    <Button title={'Cadastrar Pet'} destination={''} paddingLeft={'70px'} paddingRight={'70px'} />
                 </div>
                 
             </form>
