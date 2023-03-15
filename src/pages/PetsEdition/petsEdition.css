@@ -29,3 +29,10 @@
 	column-gap: 52px;
 	row-gap: 40px;
 }
+
+.pets-no-content {
+	display: flex;
+	justify-content: center;
+
+	margin: 20px;
+}

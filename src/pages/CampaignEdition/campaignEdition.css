@@ -20,7 +20,7 @@
 	padding: 74px 0 72px 0;
 }
 
-.pets-content {
+.campaign-content {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(14.125rem, auto));
 	justify-content: space-between;
@@ -30,9 +30,9 @@
 	row-gap: 40px;
 }
 
-.pets {
-	height: 394px;
-	min-width: 100%;
-	margin: 0;
-	background-color: black;
+.campaign-no-content {
+	display: flex;
+	justify-content: center;
+
+	margin: 20px;
 }

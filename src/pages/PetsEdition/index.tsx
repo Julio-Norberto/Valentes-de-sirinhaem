@@ -11,6 +11,8 @@ export const PetsEdition: React.FunctionComponent = () => {
     {name: 'Sasão', image: dogExemple, id: '789'},
   ]
 
+  const isEmptyPets = mockPets.length < 1
+
   return (
     <div className='container'>
       <Bar withMenu={true} />
@@ -18,17 +20,21 @@ export const PetsEdition: React.FunctionComponent = () => {
       <section className='content'>
         <h1>Todos os pets</h1>
 
-        <div className='pets-content'>
+        <div className={isEmptyPets ? 'pets-no-content' : 'pets-content'}>
           {
-            mockPets.map((pet) => {
-              return (
-                <PetEditionCard 
-                  key={pet.id}
-                  image={pet.image}
-                  name={pet.name}
-                />
-              )
-            })
+            isEmptyPets ? (
+              <span>Desculpe, no momento não temos pets cadastradas</span>
+              ) : (
+                mockPets.map((pet) => {
+                  return (
+                    <PetEditionCard 
+                      key={pet.id}
+                      image={pet.image}
+                      name={pet.name}
+                    />
+                  )
+                })
+            )
           }
         </div>
       </section>
