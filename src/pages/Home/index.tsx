@@ -34,7 +34,7 @@ export const Home: React.FunctionComponent = () => {
               <img src={dogs} alt="" />
             </div>
 
-          </div>
+          </div >
           <Bar title='Você pode fazer a diferença nessa luta' />
 
           <SectionHomeCard

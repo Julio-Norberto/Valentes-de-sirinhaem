@@ -1,0 +1,13 @@
+.adoption-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.adoption-content {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

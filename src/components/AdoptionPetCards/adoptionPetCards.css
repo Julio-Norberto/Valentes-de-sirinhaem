@@ -1,0 +1,30 @@
+.adoption-card-container {
+  width: 30%;
+}
+
+.adoption-card-content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.card-image-adoption img {
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.card-text-adoption {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.card-text-adoption h2 {
+  margin-bottom: 8px;
+}
+
+.card-text-adoption p {
+  margin-bottom: 4px;
+}
