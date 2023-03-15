@@ -34,7 +34,7 @@
   border-radius: 16px;
   width: 200px;
   box-sizing: border-box;
-  
+
   color:#FFFFFF;
   line-height: 16.94px;
   text-align: center;
@@ -46,11 +46,11 @@
 
 .btn-edit {
   all: unset;
-  background: #03FEEF;
+  background-color: #02CBBF;
 }
 
 .btn-edit:hover {
-  background-color: #02CBBF;
+  background-color: #00a59a;
 }
 
 .btn-remove {
