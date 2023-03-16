@@ -13,11 +13,11 @@ export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({
 
     <div className='adoption-card-content'>
       <div>
-        <h2 style={{ marginBottom: '24px' }} > {title} </h2>
+        <h2 style={{ marginBottom: '24px' }} className='campaign-page-title'> {title} </h2>
       </div>
 
       <div className='card-image-adoption'>
-        <img style={{ marginBottom: '24px' }} width={200} height={200} src={image} alt="" />
+        <img className='campaign-page-image' style={{ marginBottom: '24px' }} width={200} height={200} src={image} alt="" />
       </div>
 
       <div className='card-text-adoption'>

@@ -28,3 +28,13 @@
 .card-text-adoption p {
   margin-bottom: 4px;
 }
+
+@media (min-width: 300px) and (max-width: 750px) {
+  .adoption-card-container {
+    width: 100%;
+  }
+
+  .adoption-card-content {
+    width: 100%;
+  }
+}

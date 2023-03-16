@@ -17,3 +17,9 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media(min-width: 300px) and (max-width: 750px) {
+  .title-page-campaign {
+    margin-bottom: -40px;
+  }
+}

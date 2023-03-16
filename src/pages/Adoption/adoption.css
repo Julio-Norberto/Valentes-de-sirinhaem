@@ -17,3 +17,16 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+@media (min-width: 300px) and (max-width: 750px) {
+  .adoption-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .adoption-page-title {
+    font-size: 1.6em;
+  }
+}
