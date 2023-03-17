@@ -10,7 +10,7 @@ import { Button } from '../../components/Button'
 export const Donations: React.FunctionComponent = () => {
     return (
         <div className='Donation'>
-            <Bar title='Valentes' withMenu/>
+            <Bar withMenu/>
             
         <div className='Donation-body'>
            
