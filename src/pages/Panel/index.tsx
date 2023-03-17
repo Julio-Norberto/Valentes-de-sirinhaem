@@ -11,7 +11,7 @@ export const Panel: React.FunctionComponent = () => {
     <div className='painel-container'>
       <Bar withMenu={true} />
       <div style={{ marginTop: '64px', marginBottom: '124px' }} >
-        <h1 style={{ fontSize: '2.2em' }} >Painel administrativo Valentes de Sirinhaém</h1>
+        <h1 className='title-panel' style={{ fontSize: '2.2em' }} >Painel administrativo Valentes de Sirinhaém</h1>
       </div>
 
       <div className='painel-content'>

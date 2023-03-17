@@ -1,4 +1,5 @@
 import { Button } from '../Button'
+import './campaignPageCards.css'
 
 interface ICampaignPageCards {
   name?: string
@@ -15,7 +16,7 @@ export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({
 
     <div className='adoption-card-content'>
       <div>
-        <h2 style={{ marginBottom: '24px', fontSize: '1.5em' }} className='campaign-page-title'> {title} </h2>
+        <h2 style={{ marginBottom: '24px' }} className='campaign-page-title'> {title} </h2>
       </div>
 
       <div className='card-image-adoption'>
