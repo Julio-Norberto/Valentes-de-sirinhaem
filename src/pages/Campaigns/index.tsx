@@ -16,9 +16,9 @@ export const Campaign: React.FunctionComponent = () => {
       <h1 className='title-page-campaign'>Você pode nos ajudar a salvar a vida deles</h1>
 
       <div className='campaign-page-content'>
-        <CampaignPageCards name='Bob' title='Campanha para tratamento do Bob' image={dog1} description='O Bob acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar o bob?' />
-        <CampaignPageCards name='Sansão' title='Campanha para tratamento do Sansão' image={dog2} description='O Sansão acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar o Sansão?' />
-        <CampaignPageCards name='Cacau' title='Campanha para tratamento da Cacau' image={cat1} description='A Cacau acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar a Cacau' />
+        <CampaignPageCards destination='#' name='Bob' title='Campanha para tratamento do Bob' image={dog1} description='O Bob acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar o bob?' />
+        <CampaignPageCards destination='#' name='Sansão' title='Campanha para tratamento do Sansão' image={dog2} description='O Sansão acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar o Sansão?' />
+        <CampaignPageCards destination='#' name='Cacau' title='Campanha para tratamento da Cacau' image={cat1} description='A Cacau acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar a Cacau' />
       </div>
 
       <Footer />

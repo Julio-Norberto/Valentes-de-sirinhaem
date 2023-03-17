@@ -1,19 +1,21 @@
 import { Button } from '../Button'
 
 interface ICampaignPageCards {
-  name: string
+  name?: string
   title: string
   image: any
-  description: string
+  description?: string
+  buttonTitle?: string
+  destination: string
 }
 
-export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({title, image, description, name}: ICampaignPageCards) => {
+export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({title, image, description, name, buttonTitle, destination}: ICampaignPageCards) => {
   return (
     <div className='adoption-card-container'>
 
     <div className='adoption-card-content'>
       <div>
-        <h2 style={{ marginBottom: '24px' }} className='campaign-page-title'> {title} </h2>
+        <h2 style={{ marginBottom: '24px', fontSize: '1.5em' }} className='campaign-page-title'> {title} </h2>
       </div>
 
       <div className='card-image-adoption'>
@@ -25,7 +27,7 @@ export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({
       </div>
 
       <div className='card-adoption-button'>
-        <Button paddingLeft='40px' paddingRight='40px' title={`Ajudar ${name}`} destination='/adoption' />
+        <Button paddingTop='13px' paddingBottom='14px' paddingLeft='40px' paddingRight='40px' title={ buttonTitle ? `${buttonTitle}` : `Ajudar ${name}`} destination={destination} />
       </div>
 
     </div>
