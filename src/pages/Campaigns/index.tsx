@@ -5,7 +5,6 @@ import { Footer } from '../../components/Footer'
 import dog1 from '../../assets/dog-example1.jpg'
 import dog2 from '../../assets/dog-example2.jpg'
 import cat1 from '../../assets/cat-example1.jpg'
-import cat2 from '../../assets/cat-example2.jpg'
 
 import './campaigns.css'
 

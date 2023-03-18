@@ -16,7 +16,7 @@ export const Modal: React.FunctionComponent = () => {
             </div>
 
             <div className='modal'>
-                <h2>Texto Modal</h2>
+                <h2>Ajude essa campanha usando o pix <br /> através do QRCode </h2>
                 <Form />
             </div>
         </div>
