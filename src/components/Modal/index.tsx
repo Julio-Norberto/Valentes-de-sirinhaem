@@ -23,7 +23,7 @@ export const Modal: React.FunctionComponent<ModalProps> = ({typeModal, title}: M
       </div>
 
       <div className='modal'>
-        <h2> {title} </h2>
+        <h2 style={{ color: '#fff' }} > {title} </h2>
         { typeModal == 'donation' ? <Form /> : typeModal == 'pets' ? <FormModalPets /> : <FormModalCampaign /> }
       </div>
     </div>
