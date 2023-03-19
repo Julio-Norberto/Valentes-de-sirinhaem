@@ -22,7 +22,7 @@ function hideOrShowModal(display: boolean) {
 export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({title, image, description, name, buttonTitle, destination}: ICampaignPageCards) => {
   return (
     <>
-    <Modal typeModal='donation' />
+    <Modal title='Ajude essa campanha usando o pix através do QRCode' typeModal='donation' />
     <div className='adoption-card-container'>
 
     <div className='adoption-card-content'>

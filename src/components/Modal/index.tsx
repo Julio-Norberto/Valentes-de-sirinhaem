@@ -1,12 +1,14 @@
 import './modal.css'
 
 import { Form } from '../FormModal'
+import { FormModalPets } from '../FormModalPets'
 
 type ModalProps = {
   typeModal: 'donation' | 'pets' | 'campaigns'
+  title: string
 }
 
-export const Modal: React.FunctionComponent<ModalProps> = ({typeModal}: ModalProps) => {
+export const Modal: React.FunctionComponent<ModalProps> = ({typeModal, title}: ModalProps) => {
 
   function closeModal() {
     const modal = document.querySelector('#modal')
@@ -20,8 +22,8 @@ export const Modal: React.FunctionComponent<ModalProps> = ({typeModal}: ModalPro
       </div>
 
       <div className='modal'>
-        <h2>Ajude essa campanha usando o pix <br /> através do QRCode </h2>
-        { typeModal == 'donation' ? <Form /> : typeModal == 'pets' ? '' : '' }
+        <h2> {title} </h2>
+        { typeModal == 'donation' ? <Form /> : typeModal == 'pets' ? <FormModalPets /> : '' }
       </div>
     </div>
   )
