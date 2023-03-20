@@ -1,3 +1,5 @@
+import './formModalCampaign.css'
+
 export const FormModalCampaign: React.FunctionComponent = () => {
   return (
     <div className='form-modal-container'>
@@ -11,6 +13,7 @@ export const FormModalCampaign: React.FunctionComponent = () => {
           <div className='input-pet'>
             <label htmlFor="campaign-description">Descrição:</label>
             <textarea
+              className='text-area-modal'
               style={{ padding: '8px', borderRadius: '8px' }}
               placeholder="Bob precisa de uma cirurgia na patinha..."
               name="campaign-description"

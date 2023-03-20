@@ -43,3 +43,13 @@
   width: 74%;
   margin: 0 auto;
 }
+
+@media(min-width: 300px) and (max-width: 750px) {
+  .input-pet {
+    width: 95%;
+  }
+
+  .btn-div {
+    width: 92%;
+  }
+}

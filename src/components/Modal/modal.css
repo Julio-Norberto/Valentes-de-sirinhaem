@@ -34,3 +34,10 @@
 .modal form {
   width: 90%;
 }
+
+@media(min-width: 300px) and (max-width: 750px) {
+  .modal {
+    height: 500px;
+    width: 90%;
+  }
+}
