@@ -8,10 +8,7 @@
 .campaign-main-content {
 	width: 80%;
 	margin: 10px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 200px;
 }
 
 .campaign-main-content > h1 {
@@ -36,6 +33,15 @@
 .campaign-no-content {
 	display: flex;
 	justify-content: center;
-
 	margin: 20px;
+}
+
+@media(min-width: 300px) and (max-width: 750px) {
+  .campaign-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
 }
