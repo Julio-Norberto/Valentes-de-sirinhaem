@@ -61,3 +61,9 @@
 .btn-remove:hover {
   background: #a30101;
 }
+
+@media(min-width: 300px) and (max-width: 750px) {
+  .card-container {
+    padding-bottom: 84px;
+  }
+}
