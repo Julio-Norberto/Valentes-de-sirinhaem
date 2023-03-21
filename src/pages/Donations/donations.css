@@ -1,0 +1,43 @@
+.Donation{
+    background-color: #E2E2E2;
+    
+}
+.Donation-body{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 44px auto;
+    margin-bottom: 200px;
+}
+
+.Donation-qr-and-text{
+    width: 50%;
+   align-items: center;
+    text-align: center;
+    
+}
+.Donation-qr-and-text h1{
+    color: #EF7C12;
+    margin-bottom: 15px;
+    
+}
+.Donation-qr-and-text p{
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+.Donation-qr{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+.Donation-button p{
+    margin-bottom: 30px;
+}
+
+.Donation-image{
+    width: 590px;
+    height: 590px;
+}
