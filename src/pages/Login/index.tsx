@@ -2,9 +2,25 @@ import { useState } from 'react'
 import { Bar } from '../../components/Bar'
 import { Footer } from '../../components/Footer'
 
+ import { app, auth } from '../../services/firebaseConfig'
+ import { signInWithEmailAndPassword, getAuth } from 'firebase/auth'
+
 import './login.css'
 
 export const Login: React.FunctionComponent = () => {
+  // async function loginUser() {
+  //   if(email && password)
+  //   await signInWithEmailAndPassword(auth, email, password).then((userCredetial) => {
+  //     const user = userCredetial.user
+  //     console.log(user)
+  //   }).catch((error) => {
+  //     const errorCode = error.code
+  //     const errorMessamge = error.message
+
+  //     console.log(errorMessamge)
+  //   })
+  // }
+
   const [email, setEmail] = useState<string>()
   const [password, setPassword] = useState<string>()
 
@@ -24,8 +40,8 @@ export const Login: React.FunctionComponent = () => {
           </div>
 
           {/* <input onSubmit={firebaseLogin} className='btn-submit' type="submit" value='Fazer Login' /> */}
-          <button className='btn-submit'>Fazer Login</button>
         </form>
+        <button style={{ marginTop: '-100px' }} className='btn-submit'>Fazer Login</button>
       </div>
 
       <Footer />
