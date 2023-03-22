@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Bar } from '../../components/Bar'
 import { Footer } from '../../components/Footer'
+import { useNavigate } from 'react-router-dom'
 
 import { auth } from '../../services/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
@@ -12,17 +13,18 @@ export const Login: React.FunctionComponent = () => {
     if(email && password)
     await signInWithEmailAndPassword(auth, email, password).then((userCredetial) => {
       const user = userCredetial.user
-      console.log(user)
+      navigate('/panel')
     }).catch((error) => {
       const errorCode = error.code
       const errorMessamge = error.message
 
-      console.log(errorMessamge)
+      alert("Algo de errado")
     })
   }
 
   const [email, setEmail] = useState<string>()
   const [password, setPassword] = useState<string>()
+  const navigate = useNavigate()
 
   return (
     <div className='login-container'>

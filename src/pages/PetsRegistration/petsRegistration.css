@@ -8,6 +8,10 @@
     align-items: center;
 }
 
+.pets-register-form input {
+  width: 370px;
+}
+
 .pets-register-form-title {
     height: 40px;
     font-size: 32px;
