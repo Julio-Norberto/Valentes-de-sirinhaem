@@ -27,7 +27,7 @@ export const PetsEdition: React.FunctionComponent = () => {
               ) : (
                 mockPets.map((pet) => {
                   return (
-                    <PetEditionCard 
+                    <PetEditionCard
                       key={pet.id}
                       image={pet.image}
                       name={pet.name}

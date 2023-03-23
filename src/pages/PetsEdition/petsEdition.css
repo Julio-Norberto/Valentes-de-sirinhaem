@@ -33,6 +33,14 @@
 .pets-no-content {
 	display: flex;
 	justify-content: center;
-
 	margin: 20px;
+}
+
+@media(min-width: 300px) and (max-width: 750px) {
+  .pets-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

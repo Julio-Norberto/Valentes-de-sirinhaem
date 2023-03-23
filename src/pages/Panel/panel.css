@@ -1,0 +1,28 @@
+.painel-container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.painel-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+@media(min-width: 1400px) {
+  .painel-content {
+    height: 484px;
+  }
+}
+
+@media(min-width:300px) and (max-width: 750px) {
+  .painel-content {
+    flex-wrap: wrap;
+  }
+
+  .title-panel {
+    font-size: 1.4em !important;
+    margin-bottom: -44px;
+  }
+}

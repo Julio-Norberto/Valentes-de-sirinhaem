@@ -9,15 +9,19 @@ type ButtonProps = {
   destination: string
   paddingLeft?: string
   paddingRight?: string
+  paddingTop?: string
+  paddingBottom?: string
 }
 
-export const Button:React.FunctionComponent<ButtonProps> = ({title, display, width, align, destination, paddingLeft, paddingRight}: ButtonProps) => {
+export const Button:React.FunctionComponent<ButtonProps> = ({title, display, width, align, destination, paddingLeft, paddingRight, paddingBottom, paddingTop}: ButtonProps) => {
   const style: React.CSSProperties = {
     display,
     width,
     justifyContent: align,
     paddingLeft,
-    paddingRight
+    paddingRight,
+    paddingBottom,
+    paddingTop,
   }
 
   return (

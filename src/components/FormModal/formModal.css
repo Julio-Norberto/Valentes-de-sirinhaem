@@ -1,0 +1,28 @@
+.modal-text-button {
+  margin-top: 24px;
+}
+
+.modal-text-button h3 {
+  color: #fff;
+}
+
+.modal-text-button h4 {
+  color: #fff;
+  margin-top: 8px;
+  margin-bottom: 34px;
+  font-size: 10px;
+}
+
+.btn-modal {
+  text-decoration: none;
+  background-color: #000;
+  padding: 14px;
+  color: #fff;
+  border-radius: 12px;
+}
+
+@media(min-width: 300px) and (max-width: 750px) {
+  .qr-code img {
+    width: 250px;
+  }
+}

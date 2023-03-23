@@ -1,6 +1,12 @@
 .adoption-container {
   height: 100vh;
   width: 100%;
+  text-align: center;
+}
+
+.adoption-page-title {
+  margin-top: 60px;
+  color: #EF7C12;
 }
 
 .adoption-content {
@@ -10,4 +16,17 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+@media (min-width: 300px) and (max-width: 750px) {
+  .adoption-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .adoption-page-title {
+    font-size: 1.6em;
+  }
 }

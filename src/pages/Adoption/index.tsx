@@ -14,6 +14,7 @@ export const Adoption: React.FunctionComponent = () => {
     return (
         <div className='adoption-container'>
             <Bar withMenu={true} />
+            <h1 className='adoption-page-title'>Adote um Pet e traga mais alegria para sua vida</h1>
 
             <div className='adoption-content'>
               <AdoptionPetCards image={dog1} name='Sansão' age='8 anos' weight='12' race='vira-lata' />

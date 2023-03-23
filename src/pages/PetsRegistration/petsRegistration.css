@@ -1,10 +1,6 @@
-.menu-pets-register-container {
-    background-color: #15ADA1;
-}
-
 .pets-register-form {
-    width: 80%;
     margin: 0 auto;
+    width: 400px;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -12,36 +8,29 @@
     align-items: center;
 }
 
+.pets-register-form input {
+  width: 370px;
+}
+
 .pets-register-form-title {
     height: 40px;
     font-size: 32px;
-    margin: 30px;
+    margin: 30px auto;
     text-align: center;
 }
 
-.pets-register-input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.pets-register-input-title {
-    font-size: 16px;
-    text-align: left;
-}
-
-.pets-register-input-box {
-    height: 32px;
-    width: 440px;
-    border-radius: 8px;
-    border:solid 1px #15ADA1;
-}
-
-.img-button-box {
-    width: 440px;
-    padding: 32px;
+.img-button-box, .register-button-box {
+    width: 100%;
+    padding: 32px 0px;
 }
 
 .register-button-box {
-    padding: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .pets-register-form {
+        width: 300px;
+    }
 }
