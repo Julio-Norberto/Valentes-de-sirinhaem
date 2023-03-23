@@ -35,7 +35,7 @@ export const Contact: React.FunctionComponent = () => {
 
              <div className='Contact-img'>
               <img src={location} />
-              <h4>@valentes</h4>
+              <h4>@Valentes</h4>
              </div> 
              
              </div>
