@@ -2,25 +2,77 @@ import { Bar } from '../../components/Bar'
 import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
 
-import { db } from '../../services/firebase.js'
+import { db, storage } from '../../services/firebase.js'
 import { collection, addDoc } from 'firebase/firestore'
 
 import './petsRegistration.css'
 import { useState } from 'react'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 
 export const PetsRegistration: React.FunctionComponent = () => {
 
-  async function registerPet() {
+  async function registerPet(image: any) {
+    if (!image) {
+      alert("Por favor insira uma imagem")
+      return
+    }
+      const storageRef = ref(storage, `petsImages/${image?.name}`)
+      const uploadTask = uploadBytesResumable(storageRef, image)
+
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          setProgress(progress)
+          console.log('Upload is ' + progress + '% done');
+          switch (snapshot.state) {
+            case 'paused':
+              console.log('Upload is paused');
+              break;
+            case 'running':
+              console.log('Upload is running');
+              break;
+          }
+        },
+        (error) => {
+          // A full list of error codes is available at
+          // https://firebase.google.com/docs/storage/web/handle-errors
+          switch (error.code) {
+            case 'storage/unauthorized':
+              // User doesn't have permission to access the object
+              break;
+            case 'storage/canceled':
+              // User canceled the upload
+              break;
+
+            // ...
+
+            case 'storage/unknown':
+              // Unknown error occurred, inspect error.serverResponse
+              break;
+          }
+        },
+        () => {
+            getDownloadURL(uploadTask.snapshot.ref).then(downloadURL => {
+              sendData(downloadURL)
+          })
+        }
+      )
+  }
+
+  async function sendData(downloadURL: string) {
     try {
       const pet = await addDoc(collection(db, "pets"), {
         name,
         age,
         race,
-        weight
+        weight,
+        imageUrl: downloadURL
       })
       console.log("pet cadastrado com sucesso!")
-    } catch (e) {
-      console.log("erro ao cadastrar")
+    } catch(e) {
+      console.log("algo deu errado!")
     }
   }
 
@@ -28,6 +80,9 @@ export const PetsRegistration: React.FunctionComponent = () => {
   const [age, setAge] = useState<string>()
   const [race, setRace] = useState<string>()
   const [weight, setWeight] = useState<string>()
+  const [image, setImage] = useState<any>()
+  const [imageUrl, setImageUrl] = useState<string>()
+  const [progress, setProgress] = useState<number>(0)
 
   return (
     <div>
@@ -59,10 +114,14 @@ export const PetsRegistration: React.FunctionComponent = () => {
         </div>
 
         <div className='img-button-box'>
-          <Button paddingBottom='10px' paddingTop='10px' title={'Enviar Imagem'} destination={''} paddingLeft={'12px'} paddingRight={'12px'} />
+          <input onChange={(e: any) => setImage(e.target.files[0])} type="file"  />
+          <progress value={progress} max="100" />
         </div>
 
-        <div onClick={registerPet} className='register-button-box'>
+        {/* <div>
+          <button className='btn-submit' >Enviar imagem</button>
+        </div> */}
+        <div onClick={() => registerPet(image)} className='register-button-box'>
           <Button title={'Cadastrar Pet'} destination={''} paddingLeft={'70px'} paddingRight={'70px'} />
         </div>
       </form>
