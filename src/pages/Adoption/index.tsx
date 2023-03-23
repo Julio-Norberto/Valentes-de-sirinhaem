@@ -1,28 +1,43 @@
 import { AdoptionPetCards } from '../../components/AdoptionPetCards'
 import { Bar } from '../../components/Bar'
+import { Footer } from '../../components/Footer'
+import { useState, useEffect } from 'react'
 
 import dog1 from '../../assets/dog-example1.jpg'
-import dog2 from '../../assets/dog-example2.jpg'
-import dog3 from '../../assets/dog-example3.jpg'
-import cat1 from '../../assets/cat-example1.jpg'
-import cat2 from '../../assets/cat-example2.jpg'
+
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../services/firebase'
 
 import './adoption.css'
-import { Footer } from '../../components/Footer'
+
+interface IPets {
+  name: string
+  age: string
+  race: string
+  weight: string
+}
 
 export const Adoption: React.FunctionComponent = () => {
+  useEffect(() => {
+    async function handlePetsData() {
+      const data: any = await getDocs(collection(db, "pets"))
+      setPets(data.docs.map((doc: any) => ({ ...doc.data(), id: doc.id })))
+    }
+
+    handlePetsData()
+  }, [])
+
+  const [pets, setPets] = useState<IPets[]>()
+
     return (
         <div className='adoption-container'>
             <Bar withMenu={true} />
             <h1 className='adoption-page-title'>Adote um Pet e traga mais alegria para sua vida</h1>
 
             <div className='adoption-content'>
-              <AdoptionPetCards image={dog1} name='Sansão' age='8 anos' weight='12' race='vira-lata' />
-              <AdoptionPetCards image={dog2} name='Bob' age='3 anos' weight='4' race='vira-lata' />
-              <AdoptionPetCards image={dog3} name='Sasha' age='2 meses' weight='3' race='vira-lata' />
-              <AdoptionPetCards image={cat1} name='Carlos' age='5 anos' weight='4' race='vira-lata' />
-              <AdoptionPetCards image={cat2} name='Bolinha' age='2 anos' weight='2' race='vira-lata' />
-              <AdoptionPetCards image={dog1} name='Celly' age='1 ano' weight='3' race='vira-lata' />
+              { pets?.map((pet) => (
+                <AdoptionPetCards name={pet.name} age={pet.age} race={pet.race} weight={pet.weight} image={dog1} />
+              )) }
             </div>
             <Footer />
         </div>
