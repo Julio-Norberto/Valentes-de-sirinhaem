@@ -1,35 +1,116 @@
+import { useState } from 'react'
 import { Bar } from '../../components/Bar'
 import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
 import { Input } from '../../components/Input'
+
+import { db, storage } from '../../services/firebase.js'
+import { collection, addDoc } from 'firebase/firestore'
+import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+
 import './campaignRegistration.css'
 
 export const CampaignRegistration: React.FunctionComponent = () => {
+
+  const [title, setTitle] = useState<string>()
+  const [description, setDescription] = useState<string>()
+  const [image, setImage] = useState<any>()
+  const [imageUrl, setImageUrl] = useState<string>()
+  const [progress, setProgress] = useState<number>(0)
+
+  async function registerPet(image: any) {
+    if (!image) {
+      alert("Por favor insira uma imagem")
+      return
+    }
+      const storageRef = ref(storage, `petsImages/${image?.name}`)
+      const uploadTask = uploadBytesResumable(storageRef, image)
+
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          setProgress(progress)
+          console.log('Upload is ' + progress + '% done');
+          switch (snapshot.state) {
+            case 'paused':
+              console.log('Upload is paused');
+              break;
+            case 'running':
+              console.log('Upload is running');
+              break;
+          }
+        },
+        (error) => {
+          // A full list of error codes is available at
+          // https://firebase.google.com/docs/storage/web/handle-errors
+          switch (error.code) {
+            case 'storage/unauthorized':
+              // User doesn't have permission to access the object
+              break;
+            case 'storage/canceled':
+              // User canceled the upload
+              break;
+
+            // ...
+
+            case 'storage/unknown':
+              // Unknown error occurred, inspect error.serverResponse
+              break;
+          }
+        },
+        () => {
+            getDownloadURL(uploadTask.snapshot.ref).then(downloadURL => {
+              sendData(downloadURL)
+          })
+        }
+      )
+  }
+
+  async function sendData(downloadURL: string) {
+    try {
+      const campaign = await addDoc(collection(db, "pets"), {
+        title,
+        description,
+        imageUrl: downloadURL
+      })
+      console.log("campanha cadastrada com sucesso!")
+    } catch(e) {
+      console.log("algo deu errado!")
+    }
+  }
+
     return (
-        <div>
+        <div className='campaign-register-container'>
             <Bar withMenu={true} />
-            
-            <form className='campaign-register-form'>
-                <h1 className='campaign-register-form-title'>
-                    Cadastrar nova campanha
-                </h1>
-                
-                <Input title={'Título da campanha:'} placeholder={'Cirurgia do bob...'} withTitle={true} width={'100%'} />
 
-                <div className='campaign-textarea-container'>
-                    <h1 className='campaign-textarea-title'>Descrição:</h1>
-                    <textarea className='campaign-textarea-box' placeholder='O bob precisa de uma cirurgia no olho...'/>
+            <div className='campaign-content'>
+              <form>
+                <h1>Cadastrar nova campanha</h1>
+                <div className='div-inputs-campaign'>
+                  <label htmlFor="">Título da campanha</label>
+                  <input name='title' id='title' type="text" placeholder='Cirurgia do bob...' />
                 </div>
 
-                <div className='campaign-img-button-box'>  
-                    <Button title={'Enviar Imagem'} destination={''} paddingLeft={'12px'} paddingRight={'12px'} />
+                <div className='div-inputs-campaign'>
+                  <label htmlFor="">Descrição</label>
+                  <textarea name="description" id="description" cols={40} rows={9} placeholder="O bob está com a patinha machucada e precisa de tratamento..." ></textarea>
                 </div>
 
-                <div className='campaign-register-button-box'>
-                    <Button title={'Criar campanha'} destination={''} paddingLeft={'70px'} paddingRight={'70px'} />
+                <div className='img-button'>
+                  <p style={{ marginBottom: '10px' }} >Enviar imagem</p>
+                  <input onChange={(e: any) => setImage(e.target.files[0])} type="file"  /> <br />
+                  <progress value={0} max="100" />
                 </div>
-                
-            </form>
+
+                <div onClick={() => registerPet(image)} className='register-button-box'>
+                <Button title={'Cadastrar Pet'} destination={''} paddingLeft={'70px'} paddingRight={'70px'} />
+                </div>
+
+              </form>
+            </div>
+
             <Footer />
         </div>
     )

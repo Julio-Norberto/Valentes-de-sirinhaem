@@ -41,7 +41,6 @@ export const Login: React.FunctionComponent = () => {
             <input onChange={(e) => setPassword(e.target.value)} type="password" name='password' id='password' placeholder='Digite sua senha...' />
           </div>
 
-          {/* <input onSubmit={firebaseLogin} className='btn-submit' type="submit" value='Fazer Login' /> */}
         </form>
         <button onClick={loginUser} style={{ marginTop: '-100px' }} className='btn-submit'>Fazer Login</button>
       </div>
