@@ -4,7 +4,6 @@ import { Modal } from '../Modal'
 import './campaignPageCards.css'
 
 interface ICampaignPageCards {
-  name?: string
   title: string
   image: any
   description?: string
@@ -19,7 +18,7 @@ function hideOrShowModal(display: boolean) {
   }
 }
 
-export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({title, image, description, name, buttonTitle, destination}: ICampaignPageCards) => {
+export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({title, image, description, buttonTitle, destination}: ICampaignPageCards) => {
   return (
     <>
     <Modal title='Ajude essa campanha usando o pix através do QRCode' typeModal='donation' />
@@ -39,7 +38,7 @@ export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({
       </div>
 
       <div onClick={() => hideOrShowModal(true)} className='card-adoption-button'>
-        <Button paddingTop='13px' paddingBottom='14px' paddingLeft='40px' paddingRight='40px' title={ buttonTitle ? `${buttonTitle}` : `Ajudar ${name}`} destination={destination} />
+        <Button paddingTop='13px' paddingBottom='14px' paddingLeft='40px' paddingRight='40px' title={ buttonTitle ? `${buttonTitle}` : `Quero ajudar!`} destination={destination} />
       </div>
 
     </div>

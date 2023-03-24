@@ -2,22 +2,42 @@ import { Bar } from '../../components/Bar'
 import { CampaignPageCards } from '../../components/CampaignPageCards'
 import { Footer } from '../../components/Footer'
 
-import dog1 from '../../assets/dog-example1.jpg'
-import dog2 from '../../assets/dog-example2.jpg'
-import cat1 from '../../assets/cat-example1.jpg'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../services/firebase'
+
+import { useEffect, useState } from 'react'
 
 import './campaigns.css'
 
+
+interface ICampaigns {
+  title: string
+  description: string
+  imageUrl: string
+}
+
 export const Campaign: React.FunctionComponent = () => {
+
+  useEffect(() => {
+    async function handleCampaingData() {
+      const data: any = await getDocs(collection(db, "campaigns"))
+      setCampaigns(data.docs.map((doc: any) => ({ ...doc.data(), id: doc.id })))
+    }
+
+    handleCampaingData()
+  }, [])
+
+  const [campaigns, setCampaigns] = useState<ICampaigns[]>()
+
   return (
     <div className='campaign-page-container'>
       <Bar withMenu={true} />
       <h1 className='title-page-campaign'>Você pode nos ajudar a salvar a vida deles</h1>
 
       <div className='campaign-page-content'>
-        <CampaignPageCards destination='#' name='Bob' title='Campanha para tratamento do Bob' image={dog1} description='O Bob acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar o bob?' />
-        <CampaignPageCards destination='#' name='Sansão' title='Campanha para tratamento do Sansão' image={dog2} description='O Sansão acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar o Sansão?' />
-        <CampaignPageCards destination='#' name='Cacau' title='Campanha para tratamento da Cacau' image={cat1} description='A Cacau acabou de ser resgatado com a patinha quebrada e precisa de tratamentos urgentes, ajuda a gente a tratar a Cacau' />
+        { campaigns?.map((campaign) => (
+          <CampaignPageCards title={campaign.title} description={campaign.description} image={campaign.imageUrl} destination='#' />
+        )) }
       </div>
 
       <Footer />
