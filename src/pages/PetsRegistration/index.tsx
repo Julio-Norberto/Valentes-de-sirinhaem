@@ -81,7 +81,6 @@ export const PetsRegistration: React.FunctionComponent = () => {
   const [race, setRace] = useState<string>()
   const [weight, setWeight] = useState<string>()
   const [image, setImage] = useState<any>()
-  const [imageUrl, setImageUrl] = useState<string>()
   const [progress, setProgress] = useState<number>(0)
 
   return (
