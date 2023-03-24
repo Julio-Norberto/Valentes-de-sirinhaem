@@ -16,16 +16,14 @@
 	line-height: 38.73px;
 	font-weight: 700;
 	text-align: center;
-
 	padding: 74px 0 72px 0;
 }
 
 .campaign-content {
-	display: grid;
+	display: flex;
 	grid-template-columns: repeat(auto-fit, minmax(14.125rem, auto));
 	justify-content: space-between;
 	justify-items: center;
-
 	column-gap: 52px;
 	row-gap: 40px;
 }

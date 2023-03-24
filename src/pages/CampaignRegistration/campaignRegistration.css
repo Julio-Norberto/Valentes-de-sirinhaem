@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.campaign-content {
+.campaign-content-registration {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -13,7 +13,7 @@
   margin-top: 44px;
 }
 
-.campaign-content form {
+.campaign-content-registration form {
   width: 545px;
   height: 545px;
   display: flex;
@@ -23,7 +23,7 @@
   border-radius: 8px;
 }
 
-.campaign-content form h1 {
+.campaign-content-registration form h1 {
   margin-top: 44px;
   margin-bottom: 64px;
 }
@@ -63,17 +63,17 @@
 }
 
 @media(min-width: 1400px) {
-  .campaign-content {
+  .campaign-content-registration {
     height: 640px;
   }
 }
 
 @media(min-width: 300px) and (max-width: 750px) {
-  .campaign-content {
+  .campaign-content-registration {
     width: 80%;
   }
 
-  .campaign-content form h1 {
+  .campaign-content-registration form h1 {
     font-size: 1.5em;
   }
 

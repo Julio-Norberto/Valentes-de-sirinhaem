@@ -85,7 +85,7 @@ export const CampaignRegistration: React.FunctionComponent = () => {
         <div className='campaign-register-container'>
             <Bar withMenu={true} />
 
-            <div className='campaign-content'>
+            <div className='campaign-content-registration'>
               <form>
                 <h1>Cadastrar nova campanha</h1>
                 <div className='div-inputs-campaign'>
