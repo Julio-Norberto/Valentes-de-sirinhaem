@@ -92,22 +92,22 @@ export const PetsRegistration: React.FunctionComponent = () => {
           Cadastro de Pets
         </h1>
 
-        <div>
+        <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Nome do pet</label>
-          <input onChange={(e) => setName(e.target.value)} className='input-box' type="text" />
+          <input onChange={(e) => setName(e.target.value)} type="text" />
         </div>
 
-        <div>
+        <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Idade</label>
           <input onChange={(e) => setAge(e.target.value)} className='input-box' type="text" />
         </div>
 
-        <div>
+        <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Raça</label>
           <input onChange={(e) => setRace(e.target.value)} className='input-box' type="text" />
         </div>
 
-        <div>
+        <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Peso (kg)</label>
           <input onChange={(e) => setWeight(e.target.value)} className='input-box' type="text" />
         </div>
@@ -117,9 +117,6 @@ export const PetsRegistration: React.FunctionComponent = () => {
           <progress value={progress} max="100" />
         </div>
 
-        {/* <div>
-          <button className='btn-submit' >Enviar imagem</button>
-        </div> */}
         <div onClick={() => registerPet(image)} className='register-button-box'>
           <Button title={'Cadastrar Pet'} destination={''} paddingLeft={'70px'} paddingRight={'70px'} />
         </div>

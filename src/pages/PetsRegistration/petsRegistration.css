@@ -8,6 +8,19 @@
     align-items: center;
 }
 
+.div-input-pets input {
+  max-width: 100%;
+  height: 18px;
+  border-radius: 8px;
+  border: 1px solid #1CB4A8;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.div-input-pets label {
+  margin-bottom: 10px;
+}
+
 .pets-register-form input {
   width: 370px;
 }

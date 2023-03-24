@@ -1,13 +1,10 @@
-.Contact{
-    background-color: #E2E2E2;
-}
-
 .Contact-container{
     display: flex;
     align-items: center;
     width: 80%;
     margin: 44px auto;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     justify-content: space-between;
 }
 .Contact-text-and-midia{
@@ -32,7 +29,7 @@
 .Contact-text-and-midia img{
     width: 58px;
     height: 58px;
-  
+
 }
 
 .Contact-img{
@@ -45,4 +42,10 @@
 .contact-img-out{
     width: 500px;
     height: 500px;
+}
+
+@media(min-width: 1400px) {
+  .Contact-container {
+    height: 640px;
+  }
 }
