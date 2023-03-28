@@ -14,6 +14,7 @@ interface ICampaigns {
   title: string
   description: string
   imageUrl: string
+  id: string
 }
 
 export const Campaign: React.FunctionComponent = () => {
@@ -36,7 +37,7 @@ export const Campaign: React.FunctionComponent = () => {
 
       <div className='campaign-page-content'>
         { campaigns?.map((campaign) => (
-          <CampaignPageCards title={campaign.title} description={campaign.description} image={campaign.imageUrl} destination='#' />
+          <CampaignPageCards key={campaign.id} title={campaign.title} description={campaign.description} image={campaign.imageUrl} destination='#' />
         )) }
       </div>
 

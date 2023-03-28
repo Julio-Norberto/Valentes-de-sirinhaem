@@ -16,6 +16,7 @@ interface IPets {
   race: string
   weight: string
   imageUrl?: string
+  id: string
 }
 
 export const Adoption: React.FunctionComponent = () => {
@@ -37,7 +38,7 @@ export const Adoption: React.FunctionComponent = () => {
 
             <div className='adoption-content'>
               { pets?.map((pet) => (
-                <AdoptionPetCards name={pet.name} age={pet.age} race={pet.race} weight={pet.weight} image={pet.imageUrl} />
+                <AdoptionPetCards key={pet.id} name={pet.name} age={pet.age} race={pet.race} weight={pet.weight} image={pet.imageUrl} />
               )) }
             </div>
             <Footer />

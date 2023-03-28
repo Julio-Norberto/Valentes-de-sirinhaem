@@ -1,17 +1,31 @@
 import { Footer } from '../../components/Footer'
 import './petsEdition.css'
-import dogExemple from '../../assets/dog-example2.jpg'
 import { PetEditionCard } from '../../components/PetEditionCard'
 import { Bar } from '../../components/Bar'
+import { useState, useEffect } from 'react'
+
+// firebase
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../services/firebase'
+
+interface IPetsEdition {
+  name: string
+  imageUrl: any
+  id: string
+}
 
 export const PetsEdition: React.FunctionComponent = () => {
-  const mockPets = [
-    {name: 'Sasão', image: dogExemple, id: '123'},
-    {name: 'Sasão', image: dogExemple, id: '456'},
-    {name: 'Sasão', image: dogExemple, id: '789'},
-  ]
+  useEffect(() => {
+    async function handlePetsData() {
+      const data: any = await getDocs(collection(db, "pets"))
+      setPets(data.docs.map((doc: any) => ({ ...doc.data(), id: doc.id })))
+    }
 
-  const isEmptyPets = mockPets.length < 1
+    handlePetsData()
+  }, [])
+
+  const [pets, setPets] = useState<IPetsEdition[]>()
+  const isEmptyPets = 0
 
   return (
     <div className='pets-container'>
@@ -25,11 +39,11 @@ export const PetsEdition: React.FunctionComponent = () => {
             isEmptyPets ? (
               <span>Desculpe, no momento não temos pets cadastradas</span>
               ) : (
-                mockPets.map((pet) => {
+                pets?.map((pet) => {
                   return (
                     <PetEditionCard
                       key={pet.id}
-                      image={pet.image}
+                      image={pet.imageUrl}
                       name={pet.name}
                     />
                   )

@@ -3,7 +3,7 @@ import './petEditionCard.css'
 
 interface PetEditionCardProps {
   name: string
-  image: string
+  image: any
 }
 
 function hideOrShowModal(display: boolean) {
@@ -15,9 +15,9 @@ function hideOrShowModal(display: boolean) {
 
 export const PetEditionCard: React.FunctionComponent<PetEditionCardProps> = (props) => {
   return (
-    <div className='card-container'>
+    <div className='card-container-pet-edition'>
       <Modal title='Editar pets' typeModal='pets' />
-      <img src={props.image} alt={props.name} />
+      <img width={250} height={250} src={props.image} alt={props.name} />
       <h2>{props.name}</h2>
 
       <div className='btn-container'>
