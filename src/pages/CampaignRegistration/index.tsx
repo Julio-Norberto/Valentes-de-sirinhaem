@@ -12,8 +12,8 @@ import './campaignRegistration.css'
 
 export const CampaignRegistration: React.FunctionComponent = () => {
 
-  const [title, setTitle] = useState<string>()
-  const [description, setDescription] = useState<string>()
+  const [title, setTitle] = useState<string>("")
+  const [description, setDescription] = useState<string>("")
   const [image, setImage] = useState<any>()
   const [progress, setProgress] = useState<number>(0)
 
@@ -74,8 +74,9 @@ export const CampaignRegistration: React.FunctionComponent = () => {
         description,
         imageUrl: downloadURL
       })
-      console.log("campanha cadastrada com sucesso!")
       alert("Campanha cadastrada com sucesso!")
+      setTitle("")
+      setDescription("")
     } catch(e) {
       console.log("algo deu errado!")
     }
@@ -90,12 +91,12 @@ export const CampaignRegistration: React.FunctionComponent = () => {
                 <h1>Cadastrar nova campanha</h1>
                 <div className='div-inputs-campaign'>
                   <label htmlFor="">Título da campanha</label>
-                  <input onChange={(e) => setTitle(e.target.value)} name='title' id='title' type="text" placeholder='Cirurgia do bob...' />
+                  <input value={title} onChange={(e) => setTitle(e.target.value)} name='title' id='title' type="text" placeholder='Cirurgia do bob...' />
                 </div>
 
                 <div className='div-inputs-campaign'>
                   <label htmlFor="">Descrição</label>
-                  <textarea onChange={(e) => setDescription(e.target.value)} name="description" id="description" cols={40} rows={9} placeholder="O bob está com a patinha machucada e precisa de tratamento..." ></textarea>
+                  <textarea value={description} onChange={(e) => setDescription(e.target.value)} name="description" id="description" cols={40} rows={9} placeholder="O bob está com a patinha machucada e precisa de tratamento..." ></textarea>
                 </div>
 
                 <div className='img-button'>
