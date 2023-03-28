@@ -70,16 +70,20 @@ export const PetsRegistration: React.FunctionComponent = () => {
         weight,
         imageUrl: downloadURL
       })
-      console.log("pet cadastrado com sucesso!")
+      alert("Pet cadastrado com sucesso!")
+      setName("")
+      setAge("")
+      setRace("")
+      setWeight("")
     } catch(e) {
       console.log("algo deu errado!")
     }
   }
 
-  const [name, setName] = useState<string>()
-  const [age, setAge] = useState<string>()
-  const [race, setRace] = useState<string>()
-  const [weight, setWeight] = useState<string>()
+  const [name, setName] = useState<string>("")
+  const [age, setAge] = useState<string>("")
+  const [race, setRace] = useState<string>("")
+  const [weight, setWeight] = useState<string>("")
   const [image, setImage] = useState<any>()
   const [progress, setProgress] = useState<number>(0)
 
@@ -94,22 +98,22 @@ export const PetsRegistration: React.FunctionComponent = () => {
 
         <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Nome do pet</label>
-          <input onChange={(e) => setName(e.target.value)} type="text" />
+          <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Bob' />
         </div>
 
         <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Idade</label>
-          <input onChange={(e) => setAge(e.target.value)} className='input-box' type="text" />
+          <input value={age} onChange={(e) => setAge(e.target.value)} className='input-box' type="text" placeholder='2 anos' />
         </div>
 
         <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Raça</label>
-          <input onChange={(e) => setRace(e.target.value)} className='input-box' type="text" />
+          <input value={race} onChange={(e) => setRace(e.target.value)} className='input-box' type="text" placeholder='vira-lata' />
         </div>
 
         <div className='div-input-pets'>
           <label style={{ fontWeight: 'bold' }} htmlFor="">Peso (kg)</label>
-          <input onChange={(e) => setWeight(e.target.value)} className='input-box' type="text" />
+          <input value={weight} onChange={(e) => setWeight(e.target.value)} className='input-box' type="text" placeholder='4' />
         </div>
 
         <div className='img-button-box'>

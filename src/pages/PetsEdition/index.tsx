@@ -42,6 +42,7 @@ export const PetsEdition: React.FunctionComponent = () => {
                 pets?.map((pet) => {
                   return (
                     <PetEditionCard
+                      id={pet.id}
                       key={pet.id}
                       image={pet.imageUrl}
                       name={pet.name}
