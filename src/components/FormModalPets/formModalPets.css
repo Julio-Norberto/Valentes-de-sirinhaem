@@ -40,6 +40,7 @@
 
 .btn-div {
   display: flex;
+  flex-direction: column;
   width: 74%;
   margin: 0 auto;
 }
