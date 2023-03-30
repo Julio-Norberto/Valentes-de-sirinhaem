@@ -12,7 +12,6 @@
 .adoption-content {
   width: 80%;
   height: 400px;
-  border: 1px solid red;
   margin: 60px auto;
   display: flex;
   flex-direction: row;
@@ -23,7 +22,6 @@
 
 @media(min-width: 1400px) {
   .adoption-content {
-    border: 1px solid green;
     height: 530px;
   }
 }
