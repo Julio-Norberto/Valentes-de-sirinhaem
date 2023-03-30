@@ -35,10 +35,10 @@ export const CampaignEditionCard: React.FunctionComponent<CanpaignEditionCardPro
   }
 
   return (
-    <div className='card-container'>
+    <div className='card-container-campaing-edition'>
       <Modal title='Editar campanha' typeModal='campaigns' id={id} />
       <h2 style={{ marginBottom: '24px' }} >{props.title}</h2>
-      <img src={props.image} alt={props.title} />
+      <img width={250} height={250} src={props.image} alt={props.title} />
 
       <div className='btn-container'>
         <button onClick={() => hideOrShowModal(true, props.id)} className='btn-edit'>Editar informações</button>

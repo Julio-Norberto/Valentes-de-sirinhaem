@@ -1,21 +1,16 @@
-.card-container {
+.card-container-campaing-edition {
   max-height: 394px;
   max-width: 296px;
 	margin: 0;
   text-align: center;
 }
 
-.card-container > img {
-  max-width: 100%;
-  min-width: 287px;
-  height: 223px;
+.card-container-campaing-edition > img {
   border-radius: 8px;
-  margin-bottom: 23px;
-
-  object-fit: cover;
+  margin-bottom: 24px;
 }
 
-.card-container > h2 {
+.card-container-campaing-edition > h2 {
   font-weight: 700;
   font-size: 20px;
   line-height: 24.2px;
