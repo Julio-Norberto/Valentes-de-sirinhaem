@@ -1,8 +1,11 @@
+// firebase
 import { doc, getDoc, updateDoc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+import { db, storage } from '../../services/firebase'
+
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { db, storage } from '../../services/firebase'
+
 import './formModalCampaign.css'
 
 type FormModalProps = {
