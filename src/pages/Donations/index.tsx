@@ -11,34 +11,34 @@ export const Donations: React.FunctionComponent = () => {
     return (
         <div className='Donation'>
             <Bar withMenu/>
-            
-        <div className='Donation-body'>
-           
 
-            
+        <div className='Donation-body'>
+
+
+
           <div className='Donation-qr-and-text'>
               <h1> Nos ajude doando qualquer valor </h1>
-              <p>  
+              <p>
                   Você é uma peça fundamental nessa luta, nos ajude a continuar <br/> cuidando dos nossos amigos de quatro patas!
               </p>
               <div className='Donation-qr'>
                 <img src={ qrcode } alt=""/>
-              </div>  
+              </div>
            <p>chave pix: 44.997.656/0001-04 (CNPJ)</p>
-           <div className='Donation-button'> 
+           <div className='Donation-button'>
             <p>Ou doe através do cartão</p>
-          
-            
+
+
             <Button title='Doar com cartão' destination=''/>
             </div>
           </div>
-            
-            
+
+
             <div className='Donation-image'>
-            <img src={Solidarity} alt=""/>
+              <img src={Solidarity} alt=""/>
             </div>
-            
-            
+
+
         </div>
             <Footer/>
         </div>

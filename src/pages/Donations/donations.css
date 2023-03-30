@@ -38,3 +38,48 @@
     width: 590px;
     height: 590px;
 }
+
+@media(min-width: 250px) and (max-width: 750px) {
+  .Donation-body {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .Donation-qr-and-text {
+    width: 100%;
+  }
+
+  .Donation-qr-and-text p {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .Donation-qr {
+    width: 100%;
+    height: 200px;
+  }
+
+  .Donation-qr img {
+    width: 300px;
+  }
+
+  .Donation-qr {
+    margin-bottom: 110px;
+  }
+
+  .Donation-button p {
+    margin-bottom: 34px;
+  }
+
+  .Donation-image {
+    width: 100%;
+    height: 400px;
+    margin-top: 44px;
+    display: flex;
+  }
+
+  .Donation-image img {
+    margin: 0 auto;
+  }
+}
