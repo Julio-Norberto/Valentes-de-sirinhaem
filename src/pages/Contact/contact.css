@@ -1,52 +1,99 @@
 .Contact-container{
-    display: flex;
-    align-items: center;
-    width: 80%;
-    margin: 44px auto;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 44px auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  justify-content: space-between;
 }
 .Contact-text-and-midia{
-    width: 50%;
-    margin-top: 44px;
-    text-align: center;
+  width: 50%;
+  margin-top: 44px;
+  text-align: center;
 }
 .Contact-text-and-midia h1{
-    color: #EF7C12;
-    margin-bottom: 30px;
+  color: #EF7C12;
+  margin-bottom: 30px;
 }
 
 .Contact-text-and-midia h4{
-    margin-bottom: 10px;
-
+  margin-bottom: 10px;
 }
 
 .Contact-text-and-midia p{
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 24px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 24px;
 }
 .Contact-text-and-midia img{
-    width: 58px;
-    height: 58px;
-
+  width: 58px;
+  height: 58px;
 }
 
 .Contact-img{
-    display: inline-block;
+  display: inline-block;
 }
 
 .Contact-img img{
-    margin: 30px;
+  margin: 30px;
 }
 .contact-img-out{
-    width: 500px;
-    height: 500px;
+  width: 500px;
+  height: 500px;
 }
 
 @media(min-width: 1400px) {
   .Contact-container {
     height: 640px;
+  }
+}
+
+@media(min-width: 250px) and (max-width: 750px) {
+  .Contact-container {
+    flex-direction: column;
+  }
+
+  .Contact-text-and-midia {
+    width: 100%;
+  }
+
+  .midium-p {
+    display: none;
+  }
+
+  .Contact-container h4 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .icons-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px auto;
+    width: 120px;
+  }
+
+  .Contact-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .Contact-img p {
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .Contact-img img {
+    width: 40px;
+    margin-bottom: -20px;
+  }
+
+  .contact-img-out {
+    width: 350px;
+    margin-bottom: -100px;
   }
 }
