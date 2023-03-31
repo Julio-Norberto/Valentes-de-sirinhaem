@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 // firebase
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase'
+import { ArrowClockwise } from '@phosphor-icons/react'
 
 interface IPetsEdition {
   name: string
@@ -19,13 +20,14 @@ export const PetsEdition: React.FunctionComponent = () => {
     async function handlePetsData() {
       const data: any = await getDocs(collection(db, "pets"))
       setPets(data.docs.map((doc: any) => ({ ...doc.data(), id: doc.id })))
+      setLoading(false)
     }
 
     handlePetsData()
   }, [])
 
   const [pets, setPets] = useState<IPetsEdition[]>()
-  const isEmptyPets = 0
+  const [loading, setLoading] = useState(true)
 
   return (
     <div className='pets-container'>
@@ -34,10 +36,12 @@ export const PetsEdition: React.FunctionComponent = () => {
       <section className='pets-main-content'>
         <h1>Todos os pets</h1>
 
-        <div className={isEmptyPets ? 'pets-no-content' : 'pets-content'}>
+        <div className={loading ? 'pets-no-content' : 'pets-content'}>
           {
-            isEmptyPets ? (
-              <span>Desculpe, no momento não temos pets cadastradas</span>
+            loading ? (
+              <div>
+                <ArrowClockwise className='icon-loading' size={32} />
+              </div>
               ) : (
                 pets?.map((pet) => {
                   return (
