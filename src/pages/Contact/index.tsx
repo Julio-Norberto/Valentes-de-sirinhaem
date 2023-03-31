@@ -21,7 +21,7 @@ export const Contact: React.FunctionComponent = () => {
             Você pode entrar em contato com a gente através das nossas <br/>redes sociais!
           </h4>
           <p className='midium-p'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Estamos sempre felizes em ouvir de você. Se você gostaria de se envolver com nossa causa, entre em contato conosco. Nosso objetivo é ajudar o máximo de animais possível, e sua contribuição é fundamental para o nosso sucesso.Obrigado pelo seu interesse em nossa ONG e esperamos falar com você em breve.
           </p>
         <div className='icons-contact'>
           <div className='Contact-img'>
