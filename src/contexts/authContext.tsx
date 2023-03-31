@@ -1,5 +1,5 @@
 import { User } from "firebase/auth";
-import { useEffect, useState, useContext, createContext } from "react";
+import { useEffect, useState, createContext } from "react";
 import { auth } from '../services/firebase'
 
 type ContextProps = {
