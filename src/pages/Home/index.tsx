@@ -23,7 +23,7 @@ export const Home: React.FunctionComponent = () => {
               <div>
                 <h1>Valentes de <br /> Sirinhaém</h1>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?
+                Bem-vindo à nossa ONG! Estamos dedicados a ajudar os animais de rua em nossa comunidade e trabalhamos incansavelmente para fornecer-lhes cuidados e atenção. Acreditamos que todo animal merece um lar amoroso e estamos comprometidos em ajudar a tornar isso uma realidade.
                 </p>
               </div>
 
@@ -40,7 +40,7 @@ export const Home: React.FunctionComponent = () => {
           <SectionHomeCard
             image={adoptionImage}
             title='Adote um Pet!'
-            description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Disponíveis para adoção'
+            description='Você está pronto para uma nova aventura? Adote um pet e descubra um amor incondicional. Nós temos uma variedade de animais esperando por um lar amoroso. Dê a eles uma chance e torne-se seu herói para sempre.' buttonTitle='Disponíveis para adoção'
             direction='row-reverse'
             width='200px'
             display='flex'
@@ -52,7 +52,8 @@ export const Home: React.FunctionComponent = () => {
           <SectionHomeCard
             image={dogPaw}
             title='Veja nossas campanhas!'
-            description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Ver campanhas'
+            description='Sua doação pode fornecer cuidados médicos, abrigo e alimento para aqueles que precisam. Junte-se a nós para garantir que esses animais tenham uma segunda chance na vida. Cada contribuição conta, juntos podemos ajudar a melhorar a vida desses animais.'
+            buttonTitle='Ver campanhas'
             destiny='/campaign'
             right='60px'
             left='60px'
@@ -62,7 +63,8 @@ export const Home: React.FunctionComponent = () => {
           <SectionHomeCard
             image={adoptionImage2}
             title='Faça uma doação!'
-            description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Fazer doação'
+            description='Cada contribuição faz uma grande diferença e nos ajuda a fornecer cuidados médicos, abrigo e alimentação para animais que precisam. Faça parte da nossa missão de ajudar esses animais necessitados e faça uma doação hoje. Juntos, podemos criar um futuro melhor para eles.'
+            buttonTitle='Fazer doação'
             direction='row-reverse'
             width='200px'
             display='flex'
@@ -77,7 +79,8 @@ export const Home: React.FunctionComponent = () => {
             <SectionHomeCard
               image={dogracao}
               title='Doe um pouco de ração'
-              description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. A cumque unde cupiditate vero sunt! Voluptatem ipsa sunt sapiente beatae, harum deserunt incidunt doloremque et numquam, laboriosam inventore esse? Blanditiis, repellat?' buttonTitle='Contato'
+              description='A doação de ração é uma maneira direta e significativa de ajudar os animais que atendemos. Muitos de nossos amigos peludos dependem das doações de ração para sobreviver, e sua contribuição pode ajudar a garantir que eles recebam a nutrição de que precisam. Se você quiser fazer uma doação de ração, entre em contato conosco para descobrir como você pode ajudar.'
+              buttonTitle='Contato'
               destiny='/contact'
               left='80px'
               right='80px'
