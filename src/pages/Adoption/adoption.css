@@ -20,6 +20,17 @@
   flex-wrap: wrap;
 }
 
+.adoption-content-loading {
+  width: 80%;
+  height: 400px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media(min-width: 1400px) {
   .adoption-content {
     height: 530px;

@@ -7,23 +7,35 @@ import { auth } from '../../services/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 
 import './login.css'
+import { ArrowClockwise } from '@phosphor-icons/react'
 
 export const Login: React.FunctionComponent = () => {
   async function loginUser() {
+    setLoading(true)
+
+    if(!email || !password) {
+      alert("Por favor preencha todos os campos!")
+      setLoading(false)
+      return
+    }
+
     if(email && password)
     await signInWithEmailAndPassword(auth, email, password).then((userCredetial) => {
       const user = userCredetial.user
+      setLoading(false)
       navigate('/panel')
     }).catch((error) => {
       const errorCode = error.code
       const errorMessamge = error.message
+      setLoading(false)
 
-      alert("Algo de errado")
+      alert("Algo deu errado")
     })
   }
 
   const [email, setEmail] = useState<string>()
   const [password, setPassword] = useState<string>()
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
   return (
@@ -42,7 +54,7 @@ export const Login: React.FunctionComponent = () => {
           </div>
 
         </form>
-        <button onClick={loginUser} style={{ marginTop: '-100px' }} className='btn-submit'>Fazer Login</button>
+        <button onClick={loginUser} style={{ marginTop: '-100px' }} className='btn-submit'> {loading ? <ArrowClockwise className='icon-loading' size={28} /> : 'Fazer login'} </button>
       </div>
 
       <Footer />
