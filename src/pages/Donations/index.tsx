@@ -26,10 +26,10 @@ export const Donations: React.FunctionComponent = () => {
               </div>
            <p>chave pix: 44.997.656/0001-04 (CNPJ)</p>
            <div className='Donation-button'>
-            <p>Ou doe através do cartão</p>
+            {/* <p>Ou doe através do cartão</p>
 
 
-            <Button title='Doar com cartão' destination=''/>
+            <Button title='Doar com cartão' destination=''/> */}
             </div>
           </div>
 
