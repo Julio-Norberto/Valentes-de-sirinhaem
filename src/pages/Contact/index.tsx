@@ -4,8 +4,6 @@ import { Footer } from '../../components/Footer'
 import './contact.css'
 
 import instagram from '../../assets/instagram-logo.svg'
-import whats from '../../assets/whatsapp-logo.svg'
-import location from '../../assets/map-pin.svg'
 import contact from '../../assets/contact.svg'
 
 export const Contact: React.FunctionComponent = () => {
@@ -26,7 +24,7 @@ export const Contact: React.FunctionComponent = () => {
         <div className='icons-contact'>
           <div className='Contact-img'>
             <img src={instagram}/>
-            <a href=""><p>@valentes_sirinhaem</p></a>
+            <a target='_blank' href="https://www.instagram.com/valentes_sirinhaem/"><p>@valentes_sirinhaem</p></a>
           </div>
         </div>
 

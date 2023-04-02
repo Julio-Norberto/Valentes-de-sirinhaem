@@ -8,9 +8,10 @@ interface IAdoptionPetCards {
   age: string
   weight: string
   race: string
+  destination: string
 }
 
-export const AdoptionPetCards: React.FunctionComponent<IAdoptionPetCards> = ({image, name, age, weight, race}: IAdoptionPetCards) => {
+export const AdoptionPetCards: React.FunctionComponent<IAdoptionPetCards> = ({image, name, age, weight, race, destination}: IAdoptionPetCards) => {
   return (
     <div className='adoption-card-container'>
 
@@ -29,7 +30,7 @@ export const AdoptionPetCards: React.FunctionComponent<IAdoptionPetCards> = ({im
         </div>
 
         <div className='card-adoption-button'>
-          <Button paddingLeft='40px' paddingRight='40px' title='Quero adotar' destination='/adoption' />
+          <Button paddingLeft='40px' paddingRight='40px' title='Quero adotar' destination={destination} />
         </div>
 
       </div>

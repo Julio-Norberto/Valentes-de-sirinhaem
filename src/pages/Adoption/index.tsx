@@ -46,7 +46,7 @@ export const Adoption: React.FunctionComponent = () => {
             ) : (
               <div className='adoption-content'>
                 { pets?.map((pet) => (
-                  <AdoptionPetCards key={pet.id} name={pet.name} age={pet.age} race={pet.race} weight={pet.weight} image={pet.imageUrl} />
+                  <AdoptionPetCards destination='https://ig.me/m/valentes_sirinhaem/' key={pet.id} name={pet.name} age={pet.age} race={pet.race} weight={pet.weight} image={pet.imageUrl} />
                 )) }
               </div>
             ) }
