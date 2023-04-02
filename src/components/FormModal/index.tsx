@@ -10,8 +10,8 @@ export const Form: React.FunctionComponent = () => {
       </div>
 
       <div className='modal-text-button'>
-        <h3>Ou faça sua doação através do cartão</h3>
-        <h4>Em caso de pix por favor adicione o nome do animalzinho na descrição do pix!</h4>
+        {/* <h3>Ou faça sua doação através do cartão</h3> */}
+        <h4>Por favor adicione o nome do animalzinho na descrição do pix!</h4>
         {/* <a href="#" className='btn-modal'>Doar com cartão</a> */}
       </div>
     </div>
