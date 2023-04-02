@@ -57,15 +57,12 @@
 
   .Donation-qr {
     width: 100%;
-    height: 200px;
+    height: 100%;
   }
 
   .Donation-qr img {
-    width: 300px;
-  }
-
-  .Donation-qr {
-    margin-bottom: 110px;
+    width: 100%;
+    height: 100%;
   }
 
   .Donation-button p {
@@ -73,13 +70,11 @@
   }
 
   .Donation-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 400px;
     margin-top: 44px;
-    display: flex;
-  }
-
-  .Donation-image img {
-    margin: 0 auto;
   }
 }

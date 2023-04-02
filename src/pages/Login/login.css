@@ -61,16 +61,26 @@
 }
 
 @media(min-width: 300px) and (max-width: 750px) {
+  .login-content {
+    width: 100%;
+  }
+
   .login-content form {
-    height: 364px;
+    height: 400px;
+    width: 90%;
   }
 
   .div-inputs input {
     width: 200px;
+    margin-bottom: 30px;
   }
 
   .login-content form h1 {
     font-size: 1.3em;
+  }
+
+  .input-bottom-btn {
+    margin-bottom: 100px !important;
   }
 
   .btn-submit {

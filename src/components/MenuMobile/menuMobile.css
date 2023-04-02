@@ -36,6 +36,6 @@
 @media(min-width: 50px) and (max-width: 374px) {
   .menu-mobile.active {
     top: 80px;
-    left: 215px;
+    left: 200px;
   }
 }

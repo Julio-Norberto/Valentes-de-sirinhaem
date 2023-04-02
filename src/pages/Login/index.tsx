@@ -50,7 +50,7 @@ export const Login: React.FunctionComponent = () => {
           </div>
 
           <div className='div-inputs'>
-            <input onChange={(e) => setPassword(e.target.value)} type="password" name='password' id='password' placeholder='Digite sua senha...' />
+            <input className='input-bottom-btn' onChange={(e) => setPassword(e.target.value)} type="password" name='password' id='password' placeholder='Digite sua senha...' />
           </div>
 
         </form>
