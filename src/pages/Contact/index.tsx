@@ -26,17 +26,7 @@ export const Contact: React.FunctionComponent = () => {
         <div className='icons-contact'>
           <div className='Contact-img'>
             <img src={instagram}/>
-            <p>@valentes_sirinhaem</p>
-          </div>
-
-          <div className='Contact-img'>
-            <img className='icon-whats-contact' src={whats}/>
-            <p>@valentes_sirinhaem</p>
-          </div>
-
-          <div className='Contact-img'>
-            <img className='icon-local-contact' src={location} />
-            <p>@valentes_sirinhaem</p>
+            <a href=""><p>@valentes_sirinhaem</p></a>
           </div>
         </div>
 
