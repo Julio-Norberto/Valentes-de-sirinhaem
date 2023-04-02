@@ -44,19 +44,25 @@ export const CampaignEdition: React.FunctionComponent = () => {
               <div>
                 <ArrowClockwise className='icon-loading' size={32} />
               </div>
+              ) : campaigns?.length ? (
+                (
+                  campaigns?.map((campaign) => {
+                    return (
+                      <CampaignEditionCard
+                      id={campaign.id}
+                      key={campaign.id}
+                      title={campaign.title}
+                      image={campaign.imageUrl}
+                      description={campaign.description}
+                      />
+                    )
+                  })
+              )
               ) : (
-                campaigns?.map((campaign) => {
-                  return (
-                    <CampaignEditionCard
-                    id={campaign.id}
-                    key={campaign.id}
-                    title={campaign.title}
-                    image={campaign.imageUrl}
-                    description={campaign.description}
-                    />
-                  )
-                })
-            )
+                <div className='campaign-page-content-no-campaign'>
+                  <h3 style={{ textAlign: 'center' }} >Nenhuma campanha cadastrada! :)</h3>
+                </div>
+              )
           }
         </div>
 

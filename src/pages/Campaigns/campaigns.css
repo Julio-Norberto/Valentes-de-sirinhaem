@@ -19,12 +19,13 @@
 }
 
 .campaign-page-content-no-campaign {
+  text-align: center;
   width: 80%;
   height: 400px;
   margin: 60px auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

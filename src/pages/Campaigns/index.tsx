@@ -42,11 +42,17 @@ export const Campaign: React.FunctionComponent = () => {
         <div className='campaign-page-content-loading' >
           <ArrowClockwise className='icon-loading' size={32} />
         </div>
+      ) : campaigns?.length ? (
+        (
+          <div className='campaign-page-content'>
+            { campaigns?.map((campaign) => (
+              <CampaignPageCards key={campaign.id} title={campaign.title} description={campaign.description} image={campaign.imageUrl} destination='#' />
+            )) }
+          </div>
+        )
       ) : (
-        <div className={campaigns ? 'campaign-page-content' : 'campaign-page-content-no-campaign'}>
-          { campaigns?.map((campaign) => (
-            <CampaignPageCards key={campaign.id} title={campaign.title} description={campaign.description} image={campaign.imageUrl} destination='#' />
-          )) }
+        <div className='campaign-page-content-no-campaign' >
+          <h3 style={{ textAlign: 'center' }} >Não temos campanhas ativas no momento :)</h3>
         </div>
       ) }
 
