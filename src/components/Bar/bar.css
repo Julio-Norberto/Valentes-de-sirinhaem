@@ -8,12 +8,15 @@
   color: #fff;
 }
 
-@media (min-width: 300px) and (max-width: 750px) {
+@media (min-width: 200px) and (max-width: 750px) {
   .bar-container {
     margin-top: 0;
   }
 
   .bar-container h1 {
     font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
   }
 }

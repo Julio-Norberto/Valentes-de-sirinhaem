@@ -57,7 +57,7 @@
   }
 }
 
-@media (min-width: 750px) and (max-width: 1150px) {
+@media (min-width: 751px) and (max-width: 1150px) {
   .home-container {
     background-position: right;
     background-size: cover;
@@ -69,7 +69,7 @@
   }
 
   .home-text h1 {
-    font-size: 3em;
+    font-size: 2.6em;
     color: rgb(255, 255, 255);
   }
 
@@ -78,7 +78,7 @@
   }
 }
 
-@media (min-width: 300px) and (max-width: 700px) {
+@media (min-width: 200px) and (max-width: 750px) {
   .home-container {
     background-position: top;
     background-size: cover;
@@ -96,6 +96,7 @@
   }
 
   .home-text h1 {
+    font-size: 2.4em;
     color: #000;
     margin-bottom: 28px;
   }
