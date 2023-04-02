@@ -44,7 +44,7 @@ export const Adoption: React.FunctionComponent = () => {
                 <ArrowClockwise className='icon-loading' size={32} />
               </div>
             ) : (
-              <div className='adoption-content'>
+              <div className={ pets ? 'adoption-content' : 'adoption-content-no-pets' }>
                 { pets?.map((pet) => (
                   <AdoptionPetCards destination='https://ig.me/m/valentes_sirinhaem/' key={pet.id} name={pet.name} age={pet.age} race={pet.race} weight={pet.weight} image={pet.imageUrl} />
                 )) }

@@ -1,6 +1,4 @@
 .adoption-container {
-  height: 100vh;
-  width: 100%;
   text-align: center;
 }
 
@@ -10,6 +8,17 @@
 }
 
 .adoption-content {
+  width: 80%;
+  height: 100%;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.adoption-content-no-pets {
   width: 80%;
   height: 400px;
   margin: 60px auto;
@@ -32,8 +41,13 @@
 }
 
 @media(min-width: 1400px) {
+
   .adoption-content {
-    height: 530px;
+    margin-bottom: 160px;
+  }
+
+  .adoption-content-no-pets {  
+    height: 600px;
   }
 }
 

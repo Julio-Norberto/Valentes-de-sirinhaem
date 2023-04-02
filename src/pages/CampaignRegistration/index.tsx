@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Bar } from '../../components/Bar'
 import { Button } from '../../components/Button'
 import { Footer } from '../../components/Footer'
-import { Input } from '../../components/Input'
 
 import { db, storage } from '../../services/firebase.js'
 import { collection, addDoc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+
+import { AuthContext } from '../../contexts/authContext'
 
 import './campaignRegistration.css'
 
@@ -16,8 +17,14 @@ export const CampaignRegistration: React.FunctionComponent = () => {
   const [description, setDescription] = useState<string>("")
   const [image, setImage] = useState<any>()
   const [progress, setProgress] = useState<number>(0)
+  const { user } = useContext(AuthContext)
 
   async function registerPet(image: any) {
+    if(!user) {
+      alert("Acesso negado!")
+      return
+    }
+    
     if (!image) {
       alert("Por favor insira uma imagem")
       return

@@ -8,12 +8,12 @@ import { getStorage } from 'firebase/storage'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.REACT_APP_API_KEY,
-  authDomain: import.meta.env.REACT_APP_AUTH_DOMAIN,
-  projectId: import.meta.env.REACT_APP_PROJECT_ID,
-  storageBucket: import.meta.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.REACT_APP_MESSAGE_SENDER_ID,
-  appId: import.meta.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyDkhcwt2hmELmWf_Dbc2hdn9HUcyRpk69c",
+  authDomain: "valentes-de-sirinhaem-a9cdf.firebaseapp.com",
+  projectId: "valentes-de-sirinhaem-a9cdf",
+  storageBucket: "valentes-de-sirinhaem-a9cdf.appspot.com",
+  messagingSenderId: "742631037483",
+  appId: "1:742631037483:web:6bae8333671f2b4be8e86e",
 };
 
 // Initialize Firebase

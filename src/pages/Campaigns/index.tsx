@@ -43,7 +43,7 @@ export const Campaign: React.FunctionComponent = () => {
           <ArrowClockwise className='icon-loading' size={32} />
         </div>
       ) : (
-        <div className='campaign-page-content'>
+        <div className={campaigns ? 'campaign-page-content' : 'campaign-page-content-no-campaign'}>
           { campaigns?.map((campaign) => (
             <CampaignPageCards key={campaign.id} title={campaign.title} description={campaign.description} image={campaign.imageUrl} destination='#' />
           )) }

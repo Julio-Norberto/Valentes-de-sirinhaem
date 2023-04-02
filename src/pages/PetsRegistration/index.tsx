@@ -6,12 +6,21 @@ import { db, storage } from '../../services/firebase.js'
 import { collection, addDoc } from 'firebase/firestore'
 
 import './petsRegistration.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 
+import { AuthContext } from '../../contexts/authContext'
+
 export const PetsRegistration: React.FunctionComponent = () => {
+  const { user } = useContext(AuthContext)
 
   async function registerPet(image: any) {
+
+    if(!user) {
+      alert("Acesso negado!")
+      return
+    }
+
     if (!image) {
       alert("Por favor insira uma imagem")
       return
