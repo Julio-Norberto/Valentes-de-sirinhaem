@@ -15,13 +15,11 @@ interface CanpaignEditionCardProps {
 export const CampaignEditionCard: React.FunctionComponent<CanpaignEditionCardProps> = (props) => {
   const navigate = useNavigate()
   const [id, setId] = useState("")
+  const [showModal, setShowModal] = useState(false)
 
-  function hideOrShowModal(display: boolean, id: string) {
-    const modal = document.querySelector('#modal')
+  function hideOrShowModal(id: string) {
+    setShowModal(!showModal)
     setId(id)
-    if(display) {
-      modal!.classList.remove('hide')
-    }
   }
 
   async function removeCampaign(id: string) {
@@ -36,12 +34,14 @@ export const CampaignEditionCard: React.FunctionComponent<CanpaignEditionCardPro
 
   return (
     <div className='card-container-campaing-edition'>
-      <Modal title='Editar campanha' typeModal='campaigns' id={id} />
+      
+      { showModal ? <Modal title='Editar campanha' typeModal='campaigns' id={id} /> : '' }
+
       <h2 style={{ marginBottom: '24px' }} >{props.title}</h2>
       <img width={250} height={250} src={props.image} alt={props.title} />
 
       <div className='btn-container'>
-        <button onClick={() => hideOrShowModal(true, props.id)} className='btn-edit'>Editar informações</button>
+        <button onClick={() => hideOrShowModal(props.id)} className='btn-edit'>Editar informações</button>
         <button onClick={() => removeCampaign(props.id)} className='btn-remove'>Remover Campanha</button>
       </div>
     </div>

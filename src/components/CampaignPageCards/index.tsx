@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Button } from '../Button'
 import { Modal } from '../Modal'
 
@@ -11,17 +12,17 @@ interface ICampaignPageCards {
   destination: string
 }
 
-function hideOrShowModal(display: boolean) {
-  const modal = document.querySelector('#modal')
-  if(display) {
-    modal!.classList.remove('hide')
-  }
-}
-
 export const CampaignPageCards: React.FunctionComponent<ICampaignPageCards> = ({title, image, description, buttonTitle, destination}: ICampaignPageCards) => {
+
+  const [showModal, setShowModal] = useState(false)
+
+  function hideOrShowModal(display: boolean) {
+    setShowModal(!showModal)
+  }
+
   return (
     <>
-    <Modal title='Ajude essa campanha usando o pix através do QRCode' typeModal='donation' />
+    { showModal ? <Modal title='Ajude essa campanha usando o pix através do QRCode' typeModal='donation' /> : '' }
     <div className='adoption-card-container'>
 
     <div className='adoption-card-content'>
